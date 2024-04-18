@@ -11,13 +11,13 @@ $$\vec{\textbf{u}}=a\hat{\textbf{x}}+b\hat{\textbf{y}}$$
 Uma rotação de $\theta$ unidades da base cartesiana no círculo trigonométrico unitário é dada por:
 
 $$
-\text{Rot}\_\theta(\hat{\textbf{x}})=
+\text{Rot}_\theta(\hat{\textbf{x}})=
 \begin{bmatrix}
 \cos(\theta)\\
 \sin(\theta)
 \end{bmatrix}
 \quad\text{ e }\quad
-\text{Rot}\_\theta(\hat{\textbf{y}})=
+\text{Rot}_\theta(\hat{\textbf{y}})=
 \begin{bmatrix}
 -\sin(\theta)\\
 \cos(\theta)
