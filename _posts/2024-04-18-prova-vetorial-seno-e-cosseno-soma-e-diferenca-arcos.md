@@ -88,7 +88,7 @@ $$
   \end{bmatrix}
 $$
 
-Tomando $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ nas equações (\ref{equacao-rocatao-vetor}) e (\ref{equacao-rotacao-dupla}), e considerando a rotação por $\beta$ da equação (\ref{equacao-rotacao-dupla}), tem-se:
+Tomando $\color{red}{a=\cos(\alpha)}$ e $\color{blue}{b=\sin(\alpha)}$ nas equações (\ref{equacao-rocatao-vetor}) e (\ref{equacao-rotacao-dupla}), e considerando a rotação por $\beta$ da equação (\ref{equacao-rotacao-dupla}), tem-se:
 
 $$
   \text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})
@@ -99,7 +99,7 @@ $$
   \end{bmatrix}
   =
   \begin{bmatrix}
-      \color{red}\cos(\alpha)\color{black}\cos(\beta)-\color{blue}\sin(\alpha)\color{black}\sin(\beta)\\
-      \color{red}\cos(\alpha)\color{black}\sin(\beta)+\color{blue}\sin(\alpha)\color{black}\cos(\beta)
+      \color{red}{\cos(\alpha)}\cos(\beta)-\color{blue}{\sin(\alpha)}\sin(\beta)\\
+      \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
   \end{bmatrix}
 $$
