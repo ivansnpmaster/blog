@@ -78,3 +78,12 @@ $$
 $$
 
 Lembrando a equação (\ref{equacao-rocatao-vetor}), temos:
+
+$$
+  \text{Rot}_\theta(\vec{\textbf{u}})
+  =
+  \begin{bmatrix}
+      \color{red}a\color{black}\cos(\theta)-\color{blue}b\color{black}\sin(\theta)\\
+      \color{red}a\color{black}\sin(\theta)+\color{blue}b\color{black}\cos(\theta)
+  \end{bmatrix}
+$$
