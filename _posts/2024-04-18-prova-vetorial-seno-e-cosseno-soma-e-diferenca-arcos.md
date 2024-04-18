@@ -23,3 +23,7 @@ $$
 \cos(\theta)
 \end{bmatrix}
 $$
+
+A rotação no plano preserva algumas propriedades úteis. Com $k$ e $\theta\in\mathbb{R}$, um vetor $\vec{\textbf{u}}$ rotacionado por $\theta$ e depois escalonado por $k$ é o mesmo que um vetor $\vec{\textbf{u}}$ escalonado por $k$ e depois rotacionado por $\theta$.
+
+$$\text{Rot}_\theta(\vt{u})=\text{Rot}_\theta(k\vt{u})$$
