@@ -28,6 +28,8 @@ $$
 
 $$k\text{Rot}_\theta(\vec{\textbf{u}})=\text{Rot}_\theta(k\vec{\textbf{u}})$$
 
+Isso significa que rotacionar um vetor $\vec{\textbf{u}}$ é o mesmo que rotacionar a base cartesiana e escaloná-la pelas componentes de $\vec{\textbf{u}}$.
+
 $$
   \text{Rot}_\theta(\vec{\textbf{u}})=
   a
