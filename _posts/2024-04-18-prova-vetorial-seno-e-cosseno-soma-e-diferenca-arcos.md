@@ -5,11 +5,11 @@ author: Ivan Ribeiro
 categories: matemática demonstração
 ---
 
-<p>Um vetor $\vec{\textbf{u}}\in \mathbb{R}^2$ pode ser representado através da combinação linear da base cartesiana:</p>
+<p>Um vetor $\vec{\textbf{u}}=(a\,b)\in \mathbb{R}^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
 $$\vec{\textbf{u}}=a\hat{\textbf{x}}+b\hat{\textbf{y}}$$
 
-<p>Uma rotação de $\theta$ unidades da base cartesiana no círculo trigonométrico unitário é dada por:</p>
+<p>Uma rotação de $\theta$ unidades da base cartesiana na circunferência unitária é dada por:</p>
 
 $$
 \text{Rot}_\theta(\hat{\textbf{x}})=
@@ -29,9 +29,9 @@ $$
 
 $$k\text{Rot}_\theta(\vec{\textbf{u}})=\text{Rot}_\theta(k\vec{\textbf{u}})$$
 
-Isso significa que rotacionar um vetor $\vec{\textbf{u}}$ é o mesmo que rotacionar a base cartesiana e escaloná-la pelas componentes de $\vec{\textbf{u}}$.
+Isso significa que rotacionar um vetor $\vec{\textbf{u}}$ é o mesmo que rotacionar a base cartesiana e escaloná-la pelas componentes de $\vec{\textbf{u}}$:
 
-$$\text{Rot}_\theta(\vec{\textbf{u}})=a\cdot\text{Rot}_\theta(\hat{\textbf{x}})+b\cdot\text{Rot}_\theta(\hat{\textbf{y}})$$
+$$\text{Rot}_\theta(\vec{\textbf{u}})=a\text{Rot}_\theta(\hat{\textbf{x}})+b\text{Rot}_\theta(\hat{\textbf{y}})$$
 
 $$
 \text{Rot}_\theta(\vec{\textbf{u}})=
