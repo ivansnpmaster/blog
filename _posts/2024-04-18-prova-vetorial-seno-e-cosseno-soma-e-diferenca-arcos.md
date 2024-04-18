@@ -26,4 +26,18 @@ $$
 
 <p>A rotação no plano preserva algumas propriedades úteis. Com $k$ e $\theta\in\mathbb{R}$, um vetor $\vec{\textbf{u}}$ rotacionado por $\theta$ e depois escalonado por $k$ é o mesmo que um vetor $\vec{\textbf{u}}$ escalonado por $k$ e depois rotacionado por $\theta$.</p>
 
-$$\text{Rot}_\theta(\vec{\textbf{u}})=\text{Rot}_\theta(k\vec{\textbf{u}})$$
+$$k\text{Rot}_\theta(\vec{\textbf{u}})=\text{Rot}_\theta(k\vec{\textbf{u}})$$
+\[
+  \text{Rot}_\theta(\vec{\textbf{u}})=
+  a
+  \begin{bmatrix}
+      \cos(\theta)\\
+      \sin(\theta)
+  \end{bmatrix}
+  +
+  b
+  \begin{bmatrix}
+      -\sin(\theta)\\
+      \cos(\theta)
+  \end{bmatrix}
+\]
