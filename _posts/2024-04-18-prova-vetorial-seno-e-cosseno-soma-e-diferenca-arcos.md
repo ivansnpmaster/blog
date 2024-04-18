@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prova vetorial do seno e cosseno da soma e diferença de arcos"
+title: "Prova vetorial de $\sin(a+b)$ e $\cos(a+b)$"
 categories: matemática demonstração
 ---
 
