@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prova vetorial de $\sin(a+b)$ e $\cos(a+b)$"
+title: "Prova vetorial de $\\sin(a+b)$ e $\\cos(a+b)$"
 categories: matemática demonstração
 ---
 
