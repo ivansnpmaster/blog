@@ -5,7 +5,7 @@ author: Ivan Ribeiro
 categories: matemática demonstração
 ---
 
-<p>Um vetor $\vec{\textbf{u}}=(a\,b)\in \mathbb{R}^2$ pode ser representado através da combinação linear da base cartesiana:</p>
+<p>Um vetor $\vec{\textbf{u}}=(a,\,b)\in \mathbb{R}^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
 $$\vec{\textbf{u}}=a\hat{\textbf{x}}+b\hat{\textbf{y}}$$
 
