@@ -49,7 +49,6 @@ $$
 
 $$
 \begin{equation}\tag{1}\label{equacao-rocatao-vetor}
-        \label{equacao-rocatao-vetor}
         \text{Rot}_\theta(\vec{\textbf{u}})=
         \begin{bmatrix}
             a\cos(\theta)-b\sin(\theta)\\
