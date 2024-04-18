@@ -61,7 +61,7 @@ Ao rotacionarmos, por exemplo, $\hat{\textbf{x}}$ primeiramente por $\alpha$ e d
 
 $$\text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})=\text{Rot}_\alpha(\text{Rot}_\beta(\hat{\textbf{x}}))=\text{Rot}_\beta(\text{Rot}_\alpha(\hat{\textbf{x}}))$$
 
-Temos, ainda:
+Tem-se, ainda:
 
 $$
 \begin{equation}\tag{2}
@@ -77,7 +77,7 @@ $$
 \end{equation}
 $$
 
-Lembrando a equação (\ref{equacao-rocatao-vetor}), temos:
+Lembrando a equação (\ref{equacao-rocatao-vetor}):
 
 $$
   \text{Rot}_\theta(\vec{\textbf{u}})
@@ -85,5 +85,21 @@ $$
   \begin{bmatrix}
       \color{red}a\color{black}\cos(\theta)-\color{blue}b\color{black}\sin(\theta)\\
       \color{red}a\color{black}\sin(\theta)+\color{blue}b\color{black}\cos(\theta)
+  \end{bmatrix}
+$$
+
+Tomando $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ nas equações (\ref{equacao-rocatao-vetor}) e (\ref{equacao-rotacao-dupla}), e considerando a rotação por $\beta$ da equação (\ref{equacao-rotacao-dupla}), tem-se:
+
+$$
+  \text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})
+  =
+  \begin{bmatrix}
+      \cos(\alpha+\beta)\\
+      \sin(\alpha+\beta)
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+      \color{red}\cos(\alpha)\color{black}\cos(\beta)-\color{blue}\sin(\alpha)\color{black}\sin(\beta)\\
+      \color{red}\cos(\alpha)\color{black}\sin(\beta)+\color{blue}\sin(\alpha)\color{black}\cos(\beta)
   \end{bmatrix}
 $$
