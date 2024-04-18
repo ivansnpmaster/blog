@@ -30,8 +30,10 @@ $$k\text{Rot}_\theta(\vec{\textbf{u}})=\text{Rot}_\theta(k\vec{\textbf{u}})$$
 
 Isso significa que rotacionar um vetor $\vec{\textbf{u}}$ é o mesmo que rotacionar a base cartesiana e escaloná-la pelas componentes de $\vec{\textbf{u}}$.
 
-$$
-  \text{Rot}_\theta(\vec{\textbf{u}})=
+&&
+  \begin{align*}
+    \text{Rot}_\theta(\vec{\textbf{u}})&=a\cdot\text{Rot}_\theta(\hat{\textbf{x}})+b\cdot\text{Rot}_\theta(\hat{\textbf{y}})\\
+     \text{Rot}_\theta(\vec{\textbf{u}})&=
   a
   \begin{bmatrix}
       \cos(\theta)\\
@@ -43,8 +45,8 @@ $$
       -\sin(\theta)\\
       \cos(\theta)
   \end{bmatrix}
-$$
-
+  \end{align*}
+&&
 $$
 \begin{equation}
         \label{equacao-rocatao-vetor}
