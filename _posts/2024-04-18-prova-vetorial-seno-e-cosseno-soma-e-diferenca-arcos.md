@@ -76,3 +76,5 @@ $$
     \right)
 \end{equation}
 $$
+
+Lembrando a equação (\ref{equacao-rocatao-vetor}), temos:
