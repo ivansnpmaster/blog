@@ -60,3 +60,19 @@ $$
 Ao rotacionarmos, por exemplo, $\hat{\textbf{x}}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\alpha+\beta$, comutativamente.
 
 $$\text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})=\text{Rot}_\alpha(\text{Rot}_\beta(\hat{\textbf{x}}))=\text{Rot}_\beta(\text{Rot}_\alpha(\hat{\textbf{x}}))$$
+
+Temos, ainda:
+
+$$
+\begin{equation}\tag{2}
+    \label{equacao-rotacao-dupla}
+    \text{Rot}_\beta(\text{Rot}_\alpha(\hat{\textbf{x}}))
+    =
+    \text{Rot}_\beta\left(
+        \begin{bmatrix}
+            \cos(\alpha)\\
+            \sin(\alpha)
+        \end{bmatrix}
+    \right)
+\end{equation}
+$$
