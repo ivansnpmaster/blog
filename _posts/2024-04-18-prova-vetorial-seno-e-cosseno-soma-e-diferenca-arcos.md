@@ -3,7 +3,6 @@ layout: post
 title: "Prova vetorial de $\\sin(a+b)$ e $\\cos(a+b)$"
 author: Ivan Ribeiro
 categories: matemática demonstração
-katex: True
 ---
 
 <p>Um vetor $\vec{\textbf{u}}=(a,\,b)\in \mathbb{R}^2$ pode ser representado através da combinação linear da base cartesiana:</p>
@@ -105,9 +104,3 @@ $$
       \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
   \end{bmatrix}
 $$
-
-Teste:
-inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
-display mode (centered):
-
-$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
