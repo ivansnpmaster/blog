@@ -6,6 +6,5 @@ gemspec
 gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
 gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
 
-group :jekyll_plugins do
-  gem 'jekyll-katex'
-end
+gem 'katex', '~> 0.6.0'
+gem "kramdown-math-katex"
