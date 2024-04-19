@@ -24,11 +24,7 @@ plugins:
 
 google_analytics: G-HT9PQ905HV
 
-# Build settings
 markdown: kramdown
-kramdown:
-  math_engine: katex
-  math_engine_opts: {}
 
 # Theme-specific settings
 
