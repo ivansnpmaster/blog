@@ -24,9 +24,6 @@ plugins:
 
 google_analytics: G-HT9PQ905HV
 
-kramdown:
-  math_engine: katex
-
 # Theme-specific settings
 
 # If you want to link only specific pages in your header, use this and add the path to the pages
