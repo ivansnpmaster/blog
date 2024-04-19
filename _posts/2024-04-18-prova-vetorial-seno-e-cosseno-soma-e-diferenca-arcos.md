@@ -104,3 +104,8 @@ $$
       \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
   \end{bmatrix}
 $$
+
+Teste:
+{% katexmm %}
+c = \pm\sqrt{a^2 + b^2}
+{% endkatexmm %}
