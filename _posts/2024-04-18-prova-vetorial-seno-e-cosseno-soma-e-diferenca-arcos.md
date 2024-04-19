@@ -3,7 +3,7 @@ layout: post
 title: "Prova vetorial de $\\sin(a+b)$ e $\\cos(a+b)$"
 author: Ivan Ribeiro
 categories: matemática demonstração
-katex: True
+usemathjax: true
 ---
 
 <p>Um vetor \(\vec{\textbf{u}}=(a,\,b)\in \mathbb{R}^2\) pode ser representado através da combinação linear da base cartesiana:</p>
