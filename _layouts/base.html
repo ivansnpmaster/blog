@@ -7,18 +7,6 @@
 
     {%- include header.html -%}
 
-    {% comment %} Solution: use explicit "markdownify" filter {% endcomment %}
-    {% capture content_after_katex %}
-      {% katexmm %}
-        <main class="page-content" aria-label="Content">
-          <div class="wrapper">
-            {{ content }}
-          </div>
-        </main>
-      {% endkatexmm %}
-    {% endcapture %}
-    {{ content_after_katex | markdownify }}
-
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
