@@ -17,7 +17,7 @@ $$\sen(\alpha+\beta)=\sen(\alpha)\cos(\beta)+\sen(\beta)\cos(\alpha)$$
 
 $$\cos(\alpha+\beta)=\cos(\alpha)\cos(\beta)-\sen(\alpha)\sen(\beta)$$
 
-<p>Um vetor $\vt{v}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
+<p>Um vetor $\vt{v}=(\color{red}{a},\,\color{blue}{b})\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
 $$\vt{v}=a\vtu{x}+b\vtu{y}$$
 
