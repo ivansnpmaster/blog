@@ -71,7 +71,7 @@ $$
     \end{equation}
 $$
 
-Ao rotacionarmos, por exemplo, $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\alpha+\beta$, comutativamente.
+A sacada é que a equação (\ref{equacao-rocatao-vetor}) também pode ser aplicada em um vetor que já foi rotacionado. Por exemplo, ao rotacionar $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\alpha+\beta$:
 
 $$\rot_{\alpha+\beta}(\vtu{x})=\rot_\alpha(\rot_\beta(\vtu{x}))=\rot_\beta(\rot_\alpha(\vtu{x}))$$
 
