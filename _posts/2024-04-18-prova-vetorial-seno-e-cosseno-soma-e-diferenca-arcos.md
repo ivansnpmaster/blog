@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prova vetorial de $\\sin(a+b)$ e $\\cos(a+b)$"
+title: "Prova vetorial de $\\DeclareMathOperator{\sen}{sen} \\sen(a+b)$ e $\\cos(a+b)$"
 author: Ivan Ribeiro
 categories: matemática demonstração
 ---
@@ -10,7 +10,7 @@ categories: matemática demonstração
 $$
     \newcommand{\vt}[1]{\vec{\textbf{#1}}}
     \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
-    
+
     \vt{u}=a\vtu{x}+b\vtu{y}
 $$
 
@@ -84,7 +84,7 @@ $$
 \end{equation}
 $$
 
-Considerando $\vec{\textbf{u}}$ como $\text{Rot}_\alpha(\hat{\textbf{x}})$, pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vec{\textbf{u}}$ em $\beta$ unidades da equação (\ref{equacao-rotacao-dupla}):
+Considerando $\vt{u}$ como $\text{Rot}_\alpha(\hat{\textbf{x}})$, pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades da equação (\ref{equacao-rotacao-dupla}):
 
 $$
   \text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})
