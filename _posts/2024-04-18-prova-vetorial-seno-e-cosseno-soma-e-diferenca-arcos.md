@@ -10,11 +10,7 @@ $
     \newcommand{\vt}[1]{\vec{\textbf{#1}}}
     \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
     \newcommand{\rot}{\text{Rot}}
-    \NewDocumentEnvironment{alignb}{b}{%
-        \begin{align*}
-        \refstepcounter{equation} #1 \tag{\theequation}
-        \end{align*}
-    }{}
+    \NewDocumentEnvironment{alignb}{b}{\begin{align*}\refstepcounter{equation} #1 \tag{\theequation}\end{align*}}{}
 $
 <p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
 
@@ -24,7 +20,7 @@ $$\cos(\alpha+\beta)=\cos(\alpha)\cos(\beta)-\sen(\alpha)\sen(\beta)$$
 
 <p>Um vetor $\vt{v}=(\color{red}{a},\,\color{blue}{b})\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
-$$\vt{v}=a\vtu{x}+b\vtu{y}$$
+$$\vt{v}=\color{red}{a}\vtu{x}+\color{blue}{b}\vtu{y}$$
 
 <p>Além disso, uma rotação de $\theta$ unidades da base cartesiana na circunferência unitária é dada por:</p>
 <img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; display: block;">
