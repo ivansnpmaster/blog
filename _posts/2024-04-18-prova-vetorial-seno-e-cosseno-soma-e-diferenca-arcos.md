@@ -28,12 +28,12 @@ $$
     \rot_\theta(\vtu{x})=
     \begin{bmatrix}
         \cos(\theta)\\
-        \sin(\theta)
+        \sen(\theta)
     \end{bmatrix}
     \quad\text{ e }\quad
     \rot_\theta(\vtu{y})=
     \begin{bmatrix}
-        -\sin(\theta)\\
+        -\sen(\theta)\\
         \cos(\theta)
     \end{bmatrix}
 $$
@@ -51,19 +51,19 @@ $$
         \color{red}{a}
         \begin{bmatrix}
             \cos(\theta)\\
-            \sin(\theta)
+            \sen(\theta)
         \end{bmatrix}
         +
         \color{blue}{b}
         \begin{bmatrix}
-            -\sin(\theta)\\
+            -\sen(\theta)\\
             \cos(\theta)
         \end{bmatrix}\\
         &=
         \tag{1}\label{equacao-rocatao-vetor}
         \begin{bmatrix}
-            \color{red}{a}\cos(\theta)-\color{blue}{b}\sin(\theta)\\
-            \color{red}{a}\sin(\theta)+\color{blue}{b}\cos(\theta)
+            \color{red}{a}\cos(\theta)-\color{blue}{b}\sen(\theta)\\
+            \color{red}{a}\sen(\theta)+\color{blue}{b}\cos(\theta)
         \end{bmatrix}
     \end{align*}
 $$
@@ -72,7 +72,7 @@ $$
 
 $$\rot_{\alpha+\beta}(\vtu{x})=\rot_\alpha(\rot_\beta(\vtu{x}))=\rot_\beta(\rot_\alpha(\vtu{x}))$$
 
-<p>Agora, para demonstrar o que foi proposto, considere um vetor $\vt{u}$ como $\rot_\alpha(\vtu{x})$. Suas componentes são o vetor $\vtu{x}$ rotacionado em $\alpha$ unidades, isto é, são $(\cos\alpha,\,\sen\alpha)$. Se rotacionarmos $\vt{u}$ em $\beta$ unidades, teremos aplicado uma rotação total de $\alpha+\beta$ unidades no vetor inicial $\vtu{x}$. Então, basta tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades:</p>
+<p>Agora, para demonstrar o que foi proposto, considere um vetor $\vt{u}$ como $\rot_\alpha(\vtu{x})$. Suas componentes são o vetor $\vtu{x}$ rotacionado em $\alpha$ unidades, isto é, são $(\cos\alpha,\,\sen\alpha)$. Se rotacionarmos $\vt{u}$ em $\beta$ unidades, teremos aplicado uma rotação total de $\alpha+\beta$ unidades no vetor inicial $\vtu{x}$. Então, basta tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sen(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades:</p>
 
 $$
     \begin{align*}
@@ -81,18 +81,18 @@ $$
         \rot_\beta\left(
         \begin{bmatrix}
             \cos(\alpha)\\
-            \sin(\alpha)
+            \sen(\alpha)
         \end{bmatrix}
         \right)\\
         &=
         \begin{bmatrix}
-            \color{red}{\cos(\alpha)}\cos(\beta)-\color{blue}{\sin(\alpha)}\sin(\beta)\\
-            \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
+            \color{red}{\cos(\alpha)}\cos(\beta)-\color{blue}{\sen(\alpha)}\sen(\beta)\\
+            \color{red}{\cos(\alpha)}\sen(\beta)+\color{blue}{\sen(\alpha)}\cos(\beta)
         \end{bmatrix}\\
         &=
         \begin{bmatrix}
             \cos(\alpha+\beta)\\
-            \sin(\alpha+\beta)
+            \sen(\alpha+\beta)
         \end{bmatrix}
     \end{align*}
 $$
