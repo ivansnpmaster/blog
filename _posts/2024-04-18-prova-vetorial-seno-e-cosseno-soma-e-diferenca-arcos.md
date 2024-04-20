@@ -95,6 +95,7 @@ Agora, para demonstrar o que foi proposto, considere um vetor $\vt{u}$ como $\ro
 
 $$
     \rot_\beta(\vt{u})=
+    \rot_\beta(\rot_\alpha(\vtu{x}))=
     \rot_\beta\left(
         \begin{bmatrix}
             \cos(\alpha)\\
