@@ -10,7 +10,6 @@ $
     \newcommand{\vt}[1]{\vec{\textbf{#1}}}
     \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
     \newcommand{\rot}{\text{Rot}}
-    \NewDocumentEnvironment{alignb}{b}{\begin{align*}\refstepcounter{equation} #1 \tag{\theequation}\end{align*}}{}
 $
 <p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
 
@@ -46,7 +45,7 @@ $$k\rot_\theta(\vt{v})=\rot_\theta(k\vt{v})$$
 <p>Isso significa um vetor $\vt{v}$ pode ser pensado como a base cartesiana rotacionada e escalonada pelas componentes de $\vt{v}$:</p>
 
 $$
-    \begin{alignb}
+    \begin{align}
         \rot_\theta(\vt{v})&=\color{red}{a}\rot_\theta(\vtu{x})+\color{blue}{b}\rot_\theta(\vtu{y})\\
         &=
         \color{red}{a}
@@ -60,7 +59,7 @@ $$
             -\sin(\theta)\\
             \cos(\theta)
         \end{bmatrix}
-    \end{alignb}
+    \end{align}
 $$
 
 $$
