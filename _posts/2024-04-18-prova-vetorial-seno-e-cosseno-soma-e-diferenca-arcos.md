@@ -7,7 +7,12 @@ categories: matemática demonstração
 
 <p>Um vetor $\newcommand{\R}{\mathbb{R}} \vec{\textbf{u}}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
-$$\vec{\textbf{u}}=a\hat{\textbf{x}}+b\hat{\textbf{y}}$$
+$$
+    \newcommand{\vt}[1]{\vec{\textbf{#1}}}
+    \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
+    
+    \vt{u}=a\vtu{x}+b\vtu{y}
+$$
 
 <p>Uma rotação de $\theta$ unidades da base cartesiana na circunferência unitária é dada por:</p>
 <img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
