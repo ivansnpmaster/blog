@@ -1,4 +1,4 @@
-title: Notas de matemática
+title: Notas de computação e matemática
 author:
   name: Ivan Ribeiro
   email: ivansnpmaster@gmail.com
@@ -6,7 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  Blog criado para registrar anotações de matemática.
+  Blog criado para registrar anotações de computação e matemática.
 
 # Build settings
 
