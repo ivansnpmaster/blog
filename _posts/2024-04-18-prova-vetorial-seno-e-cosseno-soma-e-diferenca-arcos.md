@@ -79,18 +79,7 @@ $$
 \end{equation}
 $$
 
-Lembrando a equação (\ref{equacao-rocatao-vetor}):
-
-$$
-  \text{Rot}_\theta(\vec{\textbf{u}})
-  =
-  \begin{bmatrix}
-      \color{red}a\color{black}\cos(\theta)-\color{blue}b\color{black}\sin(\theta)\\
-      \color{red}a\color{black}\sin(\theta)+\color{blue}b\color{black}\cos(\theta)
-  \end{bmatrix}
-$$
-
-Tomando $\color{red}{a=\cos(\alpha)}$ e $\color{blue}{b=\sin(\alpha)}$ nas equações (\ref{equacao-rocatao-vetor}) e (\ref{equacao-rotacao-dupla}), e considerando a rotação por $\beta$ da equação (\ref{equacao-rotacao-dupla}), tem-se:
+Considerando $\vec{\textbf{u}}$ como $\text{Rot}_\alpha(\hat{\textbf{x}})$, pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vec{\textbf{u}}$ em $\beta$ unidades da equação (\ref{equacao-rotacao-dupla}):
 
 $$
   \text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})
