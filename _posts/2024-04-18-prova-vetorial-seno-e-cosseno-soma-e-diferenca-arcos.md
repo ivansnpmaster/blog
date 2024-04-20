@@ -5,6 +5,14 @@ author: Ivan Ribeiro
 categories: matemática demonstração
 ---
 
+O objetivo deste post é demonstrar as seguintes igualdades:
+$$
+    \DeclareMathOperator{\sen}{sen}
+    \sen(a+b)=\sen(a)\cos(b)+\sen(b)\cos(a)
+    \quad\text{ e }\quad
+    \cos(a+b)=\cos(a)\cos(b)-\sen(a)\sen(b)
+$$
+
 <p>Um vetor $\newcommand{\R}{\mathbb{R}} \vec{\textbf{u}}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
 $$
@@ -19,7 +27,7 @@ $$
 
 $$
     \newcommand{\rot}{\text{Rot}}
-    
+
     \rot_\theta(\hat{\textbf{x}})=
     \begin{bmatrix}
         \cos(\theta)\\
