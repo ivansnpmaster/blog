@@ -94,15 +94,21 @@ $$
 Agora, para demonstrar o que foi proposto, considere um vetor $\vt{u}$ como $\rot_\alpha(\vtu{x})$. Suas componentes são o vetor $\vtu{x}$ rotacionado em $\alpha$ unidades, isto é, são $(\cos\alpha,\,\sen\alpha)$. Pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades:
 
 $$
-  \rot_{\alpha+\beta}(\vtu{x})
-  =
-  \begin{bmatrix}
-      \cos(\alpha+\beta)\\
-      \sin(\alpha+\beta)
-  \end{bmatrix}
-  =
-  \begin{bmatrix}
-      \color{red}{\cos(\alpha)}\cos(\beta)-\color{blue}{\sin(\alpha)}\sin(\beta)\\
-      \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
-  \end{bmatrix}
+    \rot_\beta(\vt{u})=
+    \rot_\beta\left(
+        \begin{bmatrix}
+            \cos(\alpha)\\
+            \sin(\alpha)
+        \end{bmatrix}
+    \right)
+    =
+    \begin{bmatrix}
+        \color{red}{\cos(\alpha)}\cos(\beta)-\color{blue}{\sin(\alpha)}\sin(\beta)\\
+        \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \cos(\alpha+\beta)\\
+        \sin(\alpha+\beta)
+    \end{bmatrix}
 $$
