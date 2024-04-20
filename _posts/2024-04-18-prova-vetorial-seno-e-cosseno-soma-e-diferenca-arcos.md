@@ -10,8 +10,7 @@ $
     \newcommand{\vt}[1]{\vec{\textbf{#1}}}
     \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
     \newcommand{\rot}{\text{Rot}}
-$
-<p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
+$<p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
 
 $$\sen(\alpha+\beta)=\sen(\alpha)\cos(\beta)+\sen(\beta)\cos(\alpha)$$
 
