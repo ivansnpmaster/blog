@@ -71,7 +71,7 @@ $$
     \end{equation}
 $$
 
-A sacada é que a equação (\ref{equacao-rocatao-vetor}) também pode ser aplicada em um vetor que já foi rotacionado. Por exemplo, ao rotacionar $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\alpha+\beta$:
+A sacada é que a equação (\ref{equacao-rocatao-vetor}) também pode ser aplicada em um vetor que já foi rotacionado. Por exemplo, ao rotacionar $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\beta$ e depois por $\alpha$. O resultante dessas rotações sucessivas é justamente a aplicação da rotação $\alpha+\beta$ em $\vtu{x}$:
 
 $$\rot_{\alpha+\beta}(\vtu{x})=\rot_\alpha(\rot_\beta(\vtu{x}))=\rot_\beta(\rot_\alpha(\vtu{x}))$$
 
