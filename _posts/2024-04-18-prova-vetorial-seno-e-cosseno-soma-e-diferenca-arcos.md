@@ -75,22 +75,6 @@ Ao rotacionarmos, por exemplo, $\vtu{x}$ primeiramente por $\alpha$ e depois por
 
 $$\rot_{\alpha+\beta}(\vtu{x})=\rot_\alpha(\rot_\beta(\vtu{x}))=\rot_\beta(\rot_\alpha(\vtu{x}))$$
 
-Tem-se, ainda:
-
-$$
-\begin{equation}\tag{2}
-    \label{equacao-rotacao-dupla}
-    \rot_\beta(\rot_\alpha(\vtu{x}))
-    =
-    \rot_\beta\left(
-        \begin{bmatrix}
-            \cos(\alpha)\\
-            \sin(\alpha)
-        \end{bmatrix}
-    \right)
-\end{equation}
-$$
-
 Agora, para demonstrar o que foi proposto, considere um vetor $\vt{u}$ como $\rot_\alpha(\vtu{x})$. Suas componentes são o vetor $\vtu{x}$ rotacionado em $\alpha$ unidades, isto é, são $(\cos\alpha,\,\sen\alpha)$. Se rotacionarmos $\vt{u}$ em $\beta$ unidades, teremos aplicado uma rotação total de $\alpha+\beta$ unidades no vetor inicial $\vtu{x}$. Então, basta tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades:
 
 $$
