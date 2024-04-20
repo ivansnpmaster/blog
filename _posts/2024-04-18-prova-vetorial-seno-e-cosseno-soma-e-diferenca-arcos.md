@@ -60,10 +60,9 @@ $$
         \end{bmatrix}\\
         &=
         \tag{1}\label{equacao-rocatao-vetor}
-        \rot_\theta(\vt{v})=
         \begin{bmatrix}
-            a\cos(\theta)-b\sin(\theta)\\
-            a\sin(\theta)+b\cos(\theta)
+            \color{red}{a}\cos(\theta)-\color{blue}{b}\sin(\theta)\\
+            \color{red}{a}\sin(\theta)+\color{blue}{b}\cos(\theta)
         \end{bmatrix}
     \end{align*}
 $$
