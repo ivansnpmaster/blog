@@ -14,7 +14,7 @@ $$
 
 $$\cos(a+b)=\cos(a)\cos(b)-\sen(a)\sen(b)$$
 
-<p>Um vetor $\newcommand{\R}{\mathbb{R}} \vec{\textbf{u}}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
+<p>Um vetor $\newcommand{\R}{\mathbb{R}} \vt{u}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
 $$
     \newcommand{\vt}[1]{\vec{\textbf{#1}}}
@@ -29,29 +29,29 @@ $$
 $$
     \newcommand{\rot}{\text{Rot}}
 
-    \rot_\theta(\hat{\textbf{x}})=
+    \rot_\theta(\vtu{x})=
     \begin{bmatrix}
         \cos(\theta)\\
         \sin(\theta)
     \end{bmatrix}
     \quad\text{ e }\quad
-    \rot_\theta(\hat{\textbf{y}})=
+    \rot_\theta(\vtu{y})=
     \begin{bmatrix}
         -\sin(\theta)\\
         \cos(\theta)
     \end{bmatrix}
 $$
 
-<p>A rotação no plano preserva algumas propriedades úteis. Com $k$ e $\theta\in\mathbb{R}$, um vetor $\vec{\textbf{u}}$ rotacionado por $\theta$ e depois escalonado por $k$ é o mesmo que um vetor $\vec{\textbf{u}}$ escalonado por $k$ e depois rotacionado por $\theta$.</p>
+<p>A rotação no plano preserva algumas propriedades úteis. Com $k$ e $\theta\in\R$, um vetor $\vt{u}$ rotacionado por $\theta$ e depois escalonado por $k$ é o mesmo que um vetor $\vt{u}$ escalonado por $k$ e depois rotacionado por $\theta$.</p>
 
-$$k\text{Rot}_\theta(\vec{\textbf{u}})=\text{Rot}_\theta(k\vec{\textbf{u}})$$
+$$k\rot_\theta(\vt{u})=\rot_\theta(k\vt{u})$$
 
-Isso significa que rotacionar um vetor $\vec{\textbf{u}}$ é o mesmo que rotacionar a base cartesiana e escaloná-la pelas componentes de $\vec{\textbf{u}}$:
+Isso significa um vetor $\vt{u}$ pode ser pensado como a base cartesiana rotacionada e escalonada pelas componentes de $\vt{u}$:
 
-$$\text{Rot}_\theta(\vec{\textbf{u}})=a\text{Rot}_\theta(\hat{\textbf{x}})+b\text{Rot}_\theta(\hat{\textbf{y}})$$
+$$\rot_\theta(\vt{u})=a\rot_\theta(\vtu{x})+b\rot_\theta(\vtu{y})$$
 
 $$
-\text{Rot}_\theta(\vec{\textbf{u}})=
+\rot_\theta(\vt{u})=
   a
   \begin{bmatrix}
       \cos(\theta)\\
@@ -67,7 +67,7 @@ $$
 
 $$
 \begin{equation}\tag{1}\label{equacao-rocatao-vetor}
-        \text{Rot}_\theta(\vec{\textbf{u}})=
+        \rot_\theta(\vt{u})=
         \begin{bmatrix}
             a\cos(\theta)-b\sin(\theta)\\
             a\sin(\theta)+b\cos(\theta)
@@ -75,18 +75,18 @@ $$
     \end{equation}
 $$
 
-Ao rotacionarmos, por exemplo, $\hat{\textbf{x}}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\alpha+\beta$, comutativamente.
+Ao rotacionarmos, por exemplo, $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\alpha+\beta$, comutativamente.
 
-$$\text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})=\text{Rot}_\alpha(\text{Rot}_\beta(\hat{\textbf{x}}))=\text{Rot}_\beta(\text{Rot}_\alpha(\hat{\textbf{x}}))$$
+$$\rot_{\alpha+\beta}(\vtu{x})=\rot_\alpha(\rot_\beta(\vtu{x}))=\rot_\beta(\rot_\alpha(\vtu{x}))$$
 
 Tem-se, ainda:
 
 $$
 \begin{equation}\tag{2}
     \label{equacao-rotacao-dupla}
-    \text{Rot}_\beta(\text{Rot}_\alpha(\hat{\textbf{x}}))
+    \rot_\beta(\rot_\alpha(\vtu{x}))
     =
-    \text{Rot}_\beta\left(
+    \rot_\beta\left(
         \begin{bmatrix}
             \cos(\alpha)\\
             \sin(\alpha)
@@ -95,10 +95,10 @@ $$
 \end{equation}
 $$
 
-Considerando $\vt{u}$ como $\text{Rot}_\alpha(\hat{\textbf{x}})$, pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades da equação (\ref{equacao-rotacao-dupla}):
+Considerando $\vt{u}$ como $\rot_\alpha(\vtu{x})$, pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades da equação (\ref{equacao-rotacao-dupla}):
 
 $$
-  \text{Rot}_{\alpha+\beta}(\hat{\textbf{x}})
+  \rot_{\alpha+\beta}(\vtu{x})
   =
   \begin{bmatrix}
       \cos(\alpha+\beta)\\
