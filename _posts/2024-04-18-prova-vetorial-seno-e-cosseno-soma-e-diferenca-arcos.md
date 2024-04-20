@@ -11,9 +11,7 @@ usemathjax: true
 $$\vec{\textbf{u}}=a\hat{\textbf{x}}+b\hat{\textbf{y}}$$
 
 <p>Uma rotação de $\theta$ unidades da base cartesiana na circunferência unitária é dada por:</p>
-<img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Descrição da imagem" style="width: 100%; max-width: 300px;">
-
-![Rotação da base cartesiana](/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png)
+<img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
 
 $$
 \text{Rot}_\theta(\hat{\textbf{x}})=
