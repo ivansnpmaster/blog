@@ -10,6 +10,11 @@ $
     \newcommand{\vt}[1]{\vec{\textbf{#1}}}
     \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
     \newcommand{\rot}{\text{Rot}}
+    \NewDocumentEnvironment{alignb}{b}{%
+        \begin{align*}
+        \refstepcounter{equation} #1 \tag{\theequation}
+        \end{align*}
+    }{}
 $
 <p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
 
@@ -21,7 +26,7 @@ $$\cos(\alpha+\beta)=\cos(\alpha)\cos(\beta)-\sen(\alpha)\sen(\beta)$$
 
 $$\vt{v}=a\vtu{x}+b\vtu{y}$$
 
-<p>Uma rotação de $\theta$ unidades da base cartesiana na circunferência unitária é dada por:</p>
+<p>Além disso, uma rotação de $\theta$ unidades da base cartesiana na circunferência unitária é dada por:</p>
 <img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 $$
@@ -44,21 +49,22 @@ $$k\rot_\theta(\vt{v})=\rot_\theta(k\vt{v})$$
 
 <p>Isso significa um vetor $\vt{v}$ pode ser pensado como a base cartesiana rotacionada e escalonada pelas componentes de $\vt{v}$:</p>
 
-$$\rot_\theta(\vt{v})=a\rot_\theta(\vtu{x})+b\rot_\theta(\vtu{y})$$
-
 $$
-\rot_\theta(\vt{v})=
-  a
-  \begin{bmatrix}
-      \cos(\theta)\\
-      \sin(\theta)
-  \end{bmatrix}
-  +
-  b
-  \begin{bmatrix}
-      -\sin(\theta)\\
-      \cos(\theta)
-  \end{bmatrix}
+    \begin{alignb}
+        \rot_\theta(\vt{v})&=\color{red}{a}\rot_\theta(\vtu{x})+\color{blue}{b}\rot_\theta(\vtu{y})\\
+        &=
+        \color{red}{a}
+        \begin{bmatrix}
+            \cos(\theta)\\
+            \sin(\theta)
+        \end{bmatrix}
+        +
+        \color{blue}{b}
+        \begin{bmatrix}
+            -\sin(\theta)\\
+            \cos(\theta)
+        \end{bmatrix}
+    \end{alignb}
 $$
 
 $$
