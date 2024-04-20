@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prova vetorial de $\\DeclareMathOperator{\sen}{sen} \\sen(a+b)$ e $\\cos(a+b)$"
+title: "Prova vetorial do seno e cosseno da soma de arcos"
 author: Ivan Ribeiro
 categories: matemática demonstração
 ---
@@ -18,17 +18,19 @@ $$
 <img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
 
 $$
-\text{Rot}_\theta(\hat{\textbf{x}})=
-\begin{bmatrix}
-\cos(\theta)\\
-\sin(\theta)
-\end{bmatrix}
-\quad\text{ e }\quad
-\text{Rot}_\theta(\hat{\textbf{y}})=
-\begin{bmatrix}
--\sin(\theta)\\
-\cos(\theta)
-\end{bmatrix}
+    \newcommand{\rot}{\text{Rot}}
+    
+    \rot_\theta(\hat{\textbf{x}})=
+    \begin{bmatrix}
+        \cos(\theta)\\
+        \sin(\theta)
+    \end{bmatrix}
+    \quad\text{ e }\quad
+    \rot_\theta(\hat{\textbf{y}})=
+    \begin{bmatrix}
+        -\sin(\theta)\\
+        \cos(\theta)
+    \end{bmatrix}
 $$
 
 <p>A rotação no plano preserva algumas propriedades úteis. Com $k$ e $\theta\in\mathbb{R}$, um vetor $\vec{\textbf{u}}$ rotacionado por $\theta$ e depois escalonado por $k$ é o mesmo que um vetor $\vec{\textbf{u}}$ escalonado por $k$ e depois rotacionado por $\theta$.</p>
