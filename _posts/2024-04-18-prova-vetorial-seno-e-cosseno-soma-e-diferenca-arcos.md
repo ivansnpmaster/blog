@@ -44,7 +44,7 @@ $$k\rot_\theta(\vt{v})=\rot_\theta(k\vt{v})$$
 <p>Isso significa um vetor $\vt{v}$ pode ser pensado como a base cartesiana rotacionada e escalonada pelas componentes de $\vt{v}$:</p>
 
 $$
-    \begin{align}
+    \begin{align*}
         \rot_\theta(\vt{v})&=\color{red}{a}\rot_\theta(\vtu{x})+\color{blue}{b}\rot_\theta(\vtu{y})\\
         &=
         \color{red}{a}
@@ -57,18 +57,15 @@ $$
         \begin{bmatrix}
             -\sin(\theta)\\
             \cos(\theta)
-        \end{bmatrix}
-    \end{align}
-$$
-
-$$
-\begin{equation}\tag{1}\label{equacao-rocatao-vetor}
+        \end{bmatrix}\\
+        &=
+        \tag{1}\label{equacao-rocatao-vetor}
         \rot_\theta(\vt{v})=
         \begin{bmatrix}
             a\cos(\theta)-b\sin(\theta)\\
             a\sin(\theta)+b\cos(\theta)
         \end{bmatrix}
-    \end{equation}
+    \end{align*}
 $$
 
 <p>A sacada é que a equação (\ref{equacao-rocatao-vetor}) também pode ser aplicada em um vetor que já foi rotacionado. Por exemplo, ao rotacionar $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\beta$ e depois por $\alpha$. O resultante dessas rotações sucessivas é justamente a aplicação da rotação $\alpha+\beta$ em $\vtu{x}$:</p>
