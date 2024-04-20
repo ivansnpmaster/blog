@@ -11,7 +11,7 @@ $
     \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
     \newcommand{\rot}{\text{Rot}}
 $
-O objetivo deste post é demonstrar as seguintes igualdades:
+<p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
 
 $$\sen(\alpha+\beta)=\sen(\alpha)\cos(\beta)+\sen(\beta)\cos(\alpha)$$
 
@@ -42,7 +42,7 @@ $$
 
 $$k\rot_\theta(\vt{v})=\rot_\theta(k\vt{v})$$
 
-Isso significa um vetor $\vt{v}$ pode ser pensado como a base cartesiana rotacionada e escalonada pelas componentes de $\vt{v}$:
+<p>Isso significa um vetor $\vt{v}$ pode ser pensado como a base cartesiana rotacionada e escalonada pelas componentes de $\vt{v}$:</p>
 
 $$\rot_\theta(\vt{v})=a\rot_\theta(\vtu{x})+b\rot_\theta(\vtu{y})$$
 
@@ -71,30 +71,31 @@ $$
     \end{equation}
 $$
 
-A sacada é que a equação (\ref{equacao-rocatao-vetor}) também pode ser aplicada em um vetor que já foi rotacionado. Por exemplo, ao rotacionar $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\beta$ e depois por $\alpha$. O resultante dessas rotações sucessivas é justamente a aplicação da rotação $\alpha+\beta$ em $\vtu{x}$:
+<p>A sacada é que a equação (\ref{equacao-rocatao-vetor}) também pode ser aplicada em um vetor que já foi rotacionado. Por exemplo, ao rotacionar $\vtu{x}$ primeiramente por $\alpha$ e depois por $\beta$, teremos o mesmo resultado se tivéssemos rotacionado por $\beta$ e depois por $\alpha$. O resultante dessas rotações sucessivas é justamente a aplicação da rotação $\alpha+\beta$ em $\vtu{x}$:</p>
 
 $$\rot_{\alpha+\beta}(\vtu{x})=\rot_\alpha(\rot_\beta(\vtu{x}))=\rot_\beta(\rot_\alpha(\vtu{x}))$$
 
-Agora, para demonstrar o que foi proposto, considere um vetor $\vt{u}$ como $\rot_\alpha(\vtu{x})$. Suas componentes são o vetor $\vtu{x}$ rotacionado em $\alpha$ unidades, isto é, são $(\cos\alpha,\,\sen\alpha)$. Se rotacionarmos $\vt{u}$ em $\beta$ unidades, teremos aplicado uma rotação total de $\alpha+\beta$ unidades no vetor inicial $\vtu{x}$. Então, basta tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades:
+<p>Agora, para demonstrar o que foi proposto, considere um vetor $\vt{u}$ como $\rot_\alpha(\vtu{x})$. Suas componentes são o vetor $\vtu{x}$ rotacionado em $\alpha$ unidades, isto é, são $(\cos\alpha,\,\sen\alpha)$. Se rotacionarmos $\vt{u}$ em $\beta$ unidades, teremos aplicado uma rotação total de $\alpha+\beta$ unidades no vetor inicial $\vtu{x}$. Então, basta tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades:</p>
 
 $$
     \begin{align*}
         \rot_\beta(\vt{u})&=\rot_\beta(\rot_\alpha(\vtu{x}))\\
-        &=\rot_\beta\left(
+        &=
+        \rot_\beta\left(
         \begin{bmatrix}
             \cos(\alpha)\\
             \sin(\alpha)
         \end{bmatrix}
-    \right)
-    \end{align*}\\
-    &=
-    \begin{bmatrix}
-        \color{red}{\cos(\alpha)}\cos(\beta)-\color{blue}{\sin(\alpha)}\sin(\beta)\\
-        \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
-    \end{bmatrix}\\
-    &=
-    \begin{bmatrix}
-        \cos(\alpha+\beta)\\
-        \sin(\alpha+\beta)
-    \end{bmatrix}
+        \right)\\
+        &=
+        \begin{bmatrix}
+            \color{red}{\cos(\alpha)}\cos(\beta)-\color{blue}{\sin(\alpha)}\sin(\beta)\\
+            \color{red}{\cos(\alpha)}\sin(\beta)+\color{blue}{\sin(\alpha)}\cos(\beta)
+        \end{bmatrix}\\
+        &=
+        \begin{bmatrix}
+            \cos(\alpha+\beta)\\
+            \sin(\alpha+\beta)
+        \end{bmatrix}
+    \end{align*}
 $$
