@@ -4,13 +4,13 @@ title: "Prova vetorial do seno e cosseno da soma de arcos"
 author: Ivan Ribeiro
 categories: matemática demonstração
 ---
-$
+$$
     \DeclareMathOperator{\sen}{sen}
     \newcommand{\R}{\mathbb{R}}
     \newcommand{\vt}[1]{\vec{\textbf{#1}}}
     \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
     \newcommand{\rot}{\text{Rot}}
-$<p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
+$$<p>O objetivo deste post é demonstrar as seguintes igualdades:</p>
 
 $$\sen(\alpha+\beta)=\sen(\alpha)\cos(\beta)+\sen(\beta)\cos(\alpha)$$
 
