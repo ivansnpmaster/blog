@@ -5,21 +5,23 @@ author: Ivan Ribeiro
 categories: matemática demonstração
 ---
 
-O objetivo deste post é demonstrar as seguintes igualdades:
-
 $$
     \DeclareMathOperator{\sen}{sen}
-    \sen(a+b)=\sen(a)\cos(b)+\sen(b)\cos(a)
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\vt}[1]{\vec{\textbf{#1}}}
+    \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
+    \newcommand{\rot}{\text{Rot}}
 $$
+
+O objetivo deste post é demonstrar as seguintes igualdades:
+
+$$\sen(a+b)=\sen(a)\cos(b)+\sen(b)\cos(a)$$
 
 $$\cos(a+b)=\cos(a)\cos(b)-\sen(a)\sen(b)$$
 
-<p>Um vetor $\newcommand{\R}{\mathbb{R}} \vt{u}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
+<p>Um vetor $\vt{u}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
 $$
-    \newcommand{\vt}[1]{\vec{\textbf{#1}}}
-    \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
-
     \vt{u}=a\vtu{x}+b\vtu{y}
 $$
 
@@ -27,8 +29,6 @@ $$
 <img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
 
 $$
-    \newcommand{\rot}{\text{Rot}}
-
     \rot_\theta(\vtu{x})=
     \begin{bmatrix}
         \cos(\theta)\\
