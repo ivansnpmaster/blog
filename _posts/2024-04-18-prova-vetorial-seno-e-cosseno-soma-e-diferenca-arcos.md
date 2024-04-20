@@ -9,6 +9,7 @@ O objetivo deste post é demonstrar as seguintes igualdades:
 
 $$
     \DeclareMathOperator{\sen}{sen}
+    
     \sen(a+b)=\sen(a)\cos(b)+\sen(b)\cos(a)
     \quad\text{ e }\quad
     \cos(a+b)=\cos(a)\cos(b)-\sen(a)\sen(b)
