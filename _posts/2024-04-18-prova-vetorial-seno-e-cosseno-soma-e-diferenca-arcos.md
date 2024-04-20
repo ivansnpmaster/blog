@@ -6,6 +6,7 @@ categories: matemática demonstração
 ---
 
 O objetivo deste post é demonstrar as seguintes igualdades:
+
 $$
     \DeclareMathOperator{\sen}{sen}
     \sen(a+b)=\sen(a)\cos(b)+\sen(b)\cos(a)
