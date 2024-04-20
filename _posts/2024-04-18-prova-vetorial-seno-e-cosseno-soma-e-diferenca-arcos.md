@@ -91,7 +91,7 @@ $$
 \end{equation}
 $$
 
-Considerando $\vt{u}$ como $\rot_\alpha(\vtu{x})$, pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades da equação (\ref{equacao-rotacao-dupla}):
+Considerando $\vt{u}$ como $\rot_\alpha(\vtu{x})$, suas componentes são $(\cos\alpha,\,\sen\alpha)$ (foi rotacionado em $\alpha$ unidades). Pode-se tomar $\color{red}a=\cos(\alpha)$ e $\color{blue}b=\sin(\alpha)$ na equação (\ref{equacao-rocatao-vetor}) e rotacionar $\vt{u}$ em $\beta$ unidades da equação (\ref{equacao-rotacao-dupla}):
 
 $$
   \rot_{\alpha+\beta}(\vtu{x})
