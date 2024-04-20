@@ -13,9 +13,9 @@ $
 $
 O objetivo deste post é demonstrar as seguintes igualdades:
 
-$$\sen(a+b)=\sen(a)\cos(b)+\sen(b)\cos(a)$$
+$$\sen(\alpha+\beta)=\sen(\alpha)\cos(\beta)+\sen(\beta)\cos(\alpha)$$
 
-$$\cos(a+b)=\cos(a)\cos(b)-\sen(a)\sen(b)$$
+$$\cos(\alpha+b)=\cos(\alpha)\cos(\beta)-\sen(\alpha)\sen(\beta)$$
 
 <p>Um vetor $\vt{u}=(a,\,b)\in\R^2$ pode ser representado através da combinação linear da base cartesiana:</p>
 
