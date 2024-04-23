@@ -26,11 +26,11 @@ $$A=r\cdot p_i$$
 <p>Agora, podemos relacionar $A=r\cdot p_i$ com $A+1$:</p>
 
 $$
-  \begin{align}
+  \begin{align*}
     (r\cdot p_i)+1&=k\cdot p_i\\
     1&=k\cdot p_i-r\cdot p_i\\
     1&=p_i(k-r)
-  \end{align}
+  \end{align*}
 $$
 
 <p>Chegamos a um absurdo: que $1$ é divisível pelo primo $p_i$. Logo, nossa hipótese inicial é falsa. Isso significa que seu complemento é verdadeiro: os números primos são infinitos.</p>
