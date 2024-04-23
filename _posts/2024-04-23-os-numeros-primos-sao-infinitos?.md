@@ -5,11 +5,11 @@ author: Ivan Ribeiro
 categories: matemática demonstração
 ---
 
-<p>$\textbf{Def.}$: Um $\textit{número primo}$ é um número natural diferente de zero e de $1$ que só é divisível por $1$ e por ele mesmo. Um inteiro positivo maior que $1$ que não é primo é chamado de $\textit{composto}$.</p>
+<p>__Def.__: Um $\textit{número primo}$ é um número natural diferente de zero e de $1$ que só é divisível por $1$ e por ele mesmo. Um inteiro positivo maior que $1$ que não é primo é chamado de $\textit{composto}$.</p>
 
 <p>Uma coisa é certa: os números compostos são infinitos. Por exemplo, os números pares. Já os números primos são também? Euclides propôs uma prova por absurdo:</p>
 
-$\textbf{Hipótese}$: Os números primos são finitos.
+<p>__Hipótese__: Os números primos são finitos.</p>
 
 Vamos criar um número $A$ que é o produto de todos os finitos primos, sendo:
 
