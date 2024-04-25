@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Prova vetorial do seno e cosseno da soma de arcos"
-author: Ivan Ribeiro
 categories: matemática demonstração
 ---
 $
