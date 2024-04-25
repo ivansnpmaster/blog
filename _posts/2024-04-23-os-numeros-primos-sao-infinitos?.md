@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Os números primos são infinitos?"
-author: Ivan Ribeiro
 categories: matemática demonstração
 ---
 
