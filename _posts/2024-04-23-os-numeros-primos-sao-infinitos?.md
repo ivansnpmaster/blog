@@ -22,7 +22,7 @@ $$A+1=k\cdot p_i$$
 
 $$A=r\cdot p_i$$
 
-<p>Agora, podemos relacionar $A=r\cdot p_i$ com $A+1$:</p>
+<p>Agora, podemos substituir $A=r\cdot p_i$ em $A+1$:</p>
 
 $$
   \begin{align*}
