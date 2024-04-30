@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Interpolação exponencial (eerp)"
+title: "Interpolação exponencial ($eerp$)"
 categories: matemática
 ---
 
