@@ -6,7 +6,7 @@ categories: matemática
 
 <p>$\newcommand{\R}{\mathbb{R}}$A interpolação exponencial ($eerp$ — <a href="https://twitter.com/FreyaHolmer/status/1068280365108920320" target="_blank">cunhado por Freya Holmér</a>) é uma técnica de interpolação paramétrica que, assim como a interpolação linear, pode ser fixa ou não-fixa:</p>
 
-$$eerp(\color{red}{a},\,\color{blue}{b},\,t)=\color{red}{a}^{(1-t)}\color{blue}{b}^t\text{, com }\color{red}{a},\,\color{blue}{b}\in\R^*_+\text{ e }t\in\R$$
+$$eerp(\color{red}{a},\,\color{blue}{b},\,\color{teal}{t})=\color{red}{a}^{(1-t)}\color{blue}{b}^t\text{, com }\color{red}{a},\,\color{blue}{b}\in\R^*_+\text{ e }t\in\R$$
 
 <p>Para a versão fixa, o teste da primeira derivada evidencia que se trata, de fato, de uma interpolação entre $\color{red}{a}$ e $\color{blue}{b}$. Considere:</p>
 
