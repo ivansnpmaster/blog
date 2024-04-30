@@ -16,7 +16,11 @@ $$eerp'(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{
 
 <p>Como $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})>0$ e $\ln(\color{red}{a})>\ln(\color{blue}{b})$, tem-se $eerp'$ negativa. Portanto, $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ é <b>estritamente decrescente</b>. Assim, tem-se:</p>
 
-$$\inf_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{blue}{b}\quad\text{ e }\quad\sup_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{red}{a}$$
+$$\inf_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{blue}{b}$$
+
+E,
+
+$$\sup_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{red}{a}$$
 
 - Quando $\color{red}{a}<\color{blue}{b}$, então $\inf_{x\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}$ e $\sup_{x\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=b$:
 
