@@ -4,7 +4,7 @@ title: "Interpolação exponencial (eerp)"
 categories: matemática
 ---
 
-<p>$\newcommand{\R}{\mathbb{R}}$A interpolação exponencial (<i>eerp</i> — cunhado por Freya Holmér) é uma técnica de interpolação paramétrica que, assim como a interpolação linear, pode ser fixa ou não-fixa:</p>
+<p>$\newcommand{\R}{\mathbb{R}}$A interpolação exponencial (<i>eerp</i> — [cunhado por Freya Holmér](https://twitter.com/FreyaHolmer/status/1068280365108920320)) é uma técnica de interpolação paramétrica que, assim como a interpolação linear, pode ser fixa ou não-fixa:</p>
 
 $$eerp(a,\,b,\,t)=a^{(1-t)}b^t\text{, com }a,\,b\in\R^*_+\text{ e }t\in\R$$
 
@@ -30,7 +30,7 @@ $$eerp(a,\,b,\,t)=a^{(1-t)}b^t=a^{(1-t)}a^t=a$$
 
 <p>Os dois primeiros casos estão exemplificados a seguir. Quando $a<b$, tem-se:</p>
 
-<img src="/blog/assets/img/2024-04-29/interpolação_exponencial_a.jpg" alt="Interpolação exponencial - caso em que 'a' é menor que 'b'" style="width: 100%; max-width: 350px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/blog/assets/img/2024-04-29/interpolação_exponencial_a.jpg" alt="Interpolação exponencial - caso em que 'a' é menor que 'b'" style="width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; display: block;">
 
 <p>Agora, para $b<a$:</p>
 
