@@ -59,7 +59,7 @@ $$
 \end{align*}
 $$
 
-<p>Isso significa que a interpolação exponencial é uma função exponencial de base positiva. Como toda função exponencial é infinitamente diferenciável, então $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ é infinitamente diferenciável. Assim, a $n$-ésima derivada em relação a $t$, com $n\geqslant1$, é:</p>
+<p>Isso significa que a interpolação exponencial é uma função exponencial de base positiva. Como toda função exponencial é infinitamente diferenciável, então $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ é infinitamente diferenciável. Assim, a $n$-ésima derivada em relação a $\color{magenta}{t}$, com $n\geqslant1$, é:</p>
 
 $$eerp^{(n)}(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})\cdot\ln\left(\frac{\color{blue}{b}}{\color{red}{a}}\right)^n$$
 
