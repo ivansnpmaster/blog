@@ -34,6 +34,8 @@ $$eerp(a,\,b,\,t)=a^{(1-t)}b^t=a^{(1-t)}a^t=a$$
 
 <p>Agora, para $b<a$:</p>
 
+<img src="/blog/assets/img/2024-04-29/interpolação_exponencial_b.jpg" alt="Interpolação exponencial - caso em que 'b' é menor que 'a'" style="width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; display: block;">
+
 <p>Ela pode aparecer de outras formas. Por exemplo, a partir da reescrita $y=c^{\log_c y}$, com $c\in\R^*_+$ e $c\neq1$:</p>
 
 $$
