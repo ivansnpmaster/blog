@@ -22,7 +22,11 @@ $$\inf_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=ee
 
 <p>Como $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})>0$ e $\ln(\color{red}{a})<\ln(\color{blue}{b})$, tem-se $eerp'$ positiva. Portanto, $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ é <b>estritamente crescente</b>. Assim,</p>
 
-$$\inf_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{red}{a}\quad\text{ e }\quad\sup_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{blue}{b}$$
+$$\inf_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{red}{a}$$
+
+E,
+
+$$\sup_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{blue}{b}$$
 
 - <p>Quando $\color{red}{a}=\color{blue}{b}$, tem-se $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ <b>constante</b>, pois:</p>
     
