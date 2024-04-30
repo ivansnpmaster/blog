@@ -30,20 +30,22 @@ $$\inf_{x\in[0,1]}eerp(a,b,t)=eerp(a,b,0)=a\quad\text{ e }\quad\sup_{x\in[0,1]}e
     
 $$eerp(a,b,t)=a^{(1-t)}b^t=a^{(1-t)}a^t=a$$
 
-<p>Os dois primeiros casos estão exemplificados na figura a seguir.</p>
+<p>Os dois primeiros casos estão exemplificados a seguir. Quando $a<b$, tem-se:</p>
 
-<img src="/blog/assets/img/2024-04-29/interpolação_exponencial_a.jpg" alt="Interpolação exponencial - caso em que 'a' é menor que 'b'" style="width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/blog/assets/img/2024-04-29/interpolação_exponencial_a.jpg" alt="Interpolação exponencial - caso em que 'a' é menor que 'b'" style="width: 100%; max-width: 350px; margin-left: auto; margin-right: auto; display: block;">
+
+<p>Agora, para $b<a$:</p>
 
 <p>Ela pode aparecer de outras formas. Por exemplo, a partir da reescrita $y=c^{\log_c y}$, com $c\in\R^*_+$ e $c\neq1$:</p>
 
 $$
-\begin{flalign*}
+\begin{align*}
     eerp(a,b,t)
     &=a^{(1-t)}b^t\\
     &=c^{\log_c a^{(1-t)}}\cdot c^{\log_c b^t}\\
     &=c^{(1-t)\log_c a+t\log_c b}\\
     &=c^{lerp(\log_c a,\;\log_c b,\;t)}
-\end{flalign*}
+\end{align*}
 $$
 
 <p>Ainda, há outra forma mais interessante computacionalmente pela remoção de um cálculo de potência:</p>
