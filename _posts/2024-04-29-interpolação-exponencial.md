@@ -20,7 +20,7 @@ $$\inf_{x\in[0,1]}eerp(a,\,b,\,t)=eerp(a,\,b,\,0)=b\quad\text{ e }\quad\sup_{x\i
 
 - Quando $a<b$, então $\inf_{x\in[0,1]} eerp(a,\,b,\,t)=a$ e $\sup_{x\in[0,1]} eerp(a,\,b,\,t)=b$:
 
-<p>Como $eerp(a,\,b,\,t)>0$ e $\ln(a)<\ln(b)$, tem-se $eerp'$ positiva. Portanto, $eerp(a,b,t)$ é \textbf{estritamente crescente}. Assim,</p>
+<p>Como $eerp(a,\,b,\,t)>0$ e $\ln(a)<\ln(b)$, tem-se $eerp'$ positiva. Portanto, $eerp(a,b,t)$ é <b>estritamente crescente</b>. Assim,</p>
 
 $$\inf_{x\in[0,1]}eerp(a,\,b,\,t)=eerp(a,\,b,\,0)=a\quad\text{ e }\quad\sup_{x\in[0,1]}eerp(a,\,b,\,t)=eerp(a,\,b,\,1)=b$$
 
