@@ -3,7 +3,8 @@ layout: post
 title: "Interpolação exponencial (eerp)"
 categories: matemática
 ---
-$\newcommand{\R}{\mathbb{R}}$<p>A interpolação exponencial (<i>eerp</i> — cunhado por Freya Holmér) é uma técnica de interpolação paramétrica que, assim como a interpolação linear, pode ser fixa ou não-fixa:</p>
+
+<p>$\newcommand{\R}{\mathbb{R}}$A interpolação exponencial (<i>eerp</i> — cunhado por Freya Holmér) é uma técnica de interpolação paramétrica que, assim como a interpolação linear, pode ser fixa ou não-fixa:</p>
 
 $$eerp(a,\,b,\,t)=a^{(1-t)}b^t\text{, com }a,\,b\in\R^*_+\text{ e }t\in\R$$
 
