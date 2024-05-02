@@ -9,9 +9,11 @@ Placeholder to allow defining custom head, in principle, you can add anything he
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
+  "fast-preview": {disabled: true},
     tex2jax: {
       inlineMath: [['$','$'], ['\\(','\\)']],
-      processEscapes: true
+      processEscapes: true,
+      preview: "none"
     },
     jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
     extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
