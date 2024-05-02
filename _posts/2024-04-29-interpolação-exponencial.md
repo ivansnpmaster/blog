@@ -12,25 +12,25 @@ $$eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}^{(1
 
 $$eerp'(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})[\ln(\color{blue}{b})-\ln(\color{red}{a})]$$
 
-- <p>Quando $\color{red}{a}>\color{blue}{b}$, então $\inf_{x\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{blue}{b}$ e $\sup_{x\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}$:</p>
+- <p>Quando $\color{red}{a}>\color{blue}{b}$, então $\inf_{\color{magenta}{t}\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{blue}{b}$ e $\sup_{\color{magenta}{t}\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}$:</p>
 
 <p>Como $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})>0$ e $\ln(\color{red}{a})>\ln(\color{blue}{b})$, tem-se $eerp'$ negativa. Portanto, $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ é <b>estritamente decrescente</b>. Assim, tem-se:</p>
 
-$$\inf_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{blue}{b}$$
+$$\inf_{\color{magenta}{t}\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{blue}{b}$$
 
 E,
 
-$$\sup_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{red}{a}$$
+$$\sup_{\color{magenta}{t}\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{red}{a}$$
 
-- Quando $\color{red}{a}<\color{blue}{b}$, então $\inf_{x\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}$ e $\sup_{x\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=b$:
+- Quando $\color{red}{a}<\color{blue}{b}$, então $\inf_{\color{magenta}{t}\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}$ e $\sup_{\color{magenta}{t}\in[0,1]} eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=b$:
 
 <p>Como $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})>0$ e $\ln(\color{red}{a})<\ln(\color{blue}{b})$, tem-se $eerp'$ positiva. Portanto, $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ é <b>estritamente crescente</b>. Assim,</p>
 
-$$\inf_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{red}{a}$$
+$$\inf_{\color{magenta}{t}\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,0)=\color{red}{a}$$
 
 E,
 
-$$\sup_{x\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{blue}{b}$$
+$$\sup_{\color{magenta}{t}\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,1)=\color{blue}{b}$$
 
 - <p>Quando $\color{red}{a}=\color{blue}{b}$, tem-se $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})$ <b>constante</b>, pois:</p>
     
