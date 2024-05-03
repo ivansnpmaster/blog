@@ -21,7 +21,7 @@ $$\cos(\alpha+\beta)=\cos(\alpha)\cos(\beta)-\sen(\alpha)\sen(\beta)$$
 $$\vt{v}=\color{red}{a}\vtu{x}+\color{blue}{b}\vtu{y}$$
 
 <p>Além disso, uma rotação de $\theta$ unidades da base cartesiana na circunferência unitária é dada por:</p>
-<img src="/blog/assets/img/2024-04-18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/blog/assets/img/2024/04/18/rotacao_base_cartesiana_r2.png" alt="Esquematização de uma rotação da base cartesiana R^2" style="width: 100%; max-width: 400px; margin-left: auto; margin-right: auto; display: block;">
 
 $$
     \rot_\theta(\vtu{x})=
