@@ -22,7 +22,7 @@ Temos três casos:
 
 <p>Como $\frac{1}{n}<r=b-a$, então existe um $m\in\N$ tal que $a< \frac{m}{n}< b$. Esse $m$ pode ser pensado como um múltiplo do racional $\frac{1}{n}$, de modo que esse múltiplo $\frac{m}{n}$ em algum momento caia no intervalo $(a,\,b)$, exemplificado na figura a seguir:</p>
 
-<img src="/blog/assets/img/2024/05/07/propriedade_arquimediana_reais_em_intervalo.jpg" alt="Esquematização da propriedade arquimediana dos números reais em um intervalo aberto" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/blog/assets/img/2024/05/07/propriedade_arquimediana_reais_em_intervalo.png" alt="Esquematização da propriedade arquimediana dos números reais em um intervalo aberto" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
 
 <p>Logo, $\frac{m}{n}\in\Q\cap(a,\,b)$ para o segundo caso.</p>
 
