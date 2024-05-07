@@ -28,6 +28,6 @@ Temos três casos:
 
 <p>Para o <b>terceiro caso</b>, $a<b<0$, pode-se pensar no caso anterior refletido na origem:</p>
 
-<img src="/blog/assets/img/2024/05/07/intervalo-refletido-origem.jpg" alt="Esquematização de um intervalo refletido na origem" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
+<img src="/blog/assets/img/2024/05/07/intervalo-refletido-origem.png" alt="Esquematização de um intervalo refletido na origem" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block;">
 
 <p>Como $a<b<0$, então $0<-b<-a$. Pelo caso anterior, existe $s\in\Q$ tal que $s\in(-b,\,-a)$. Logo, $-s\in\Q\cap(a,\,b)$.</p>
