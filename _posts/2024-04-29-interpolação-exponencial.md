@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Interpolação exponencial ($eerp$)"
+title: "Interpolação exponencial"
 categories: matemática
 ---
 
@@ -71,4 +71,4 @@ $$
 
 $$eerp^{(n)}(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})\cdot\ln\left(\frac{\color{blue}{b}}{\color{red}{a}}\right)^n$$
 
-<p>Portanto, tem-se $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})\in C^\infty$.</p>
+<p>Portanto, tem-se $eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})\in C^\infty$ (uma função suave).</p>
