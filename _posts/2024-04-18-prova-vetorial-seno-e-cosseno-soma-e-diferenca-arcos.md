@@ -2,7 +2,6 @@
 layout: post
 title: "Prova vetorial do seno e cosseno da soma de arcos"
 categories: matemática demonstração
-publicado: true
 ---
 $
     \DeclareMathOperator{\sen}{sen}

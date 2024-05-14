@@ -2,7 +2,6 @@
 layout: post
 title: "Os números primos são infinitos?"
 categories: matemática demonstração
-publicado: true
 ---
 
 <p><strong>Definição</strong>: Um número $\textit{primo}$ é um número natural diferente de zero e de $1$ que só é divisível por $1$ e por ele mesmo. Um inteiro positivo maior que $1$ que não é primo é chamado de $\textit{composto}$.</p>
