@@ -8,7 +8,7 @@ publicado: false
 <p>$\newcommand{\R}{\mathbb{R}}\newcommand{\N}{\mathbb{N}}\newcommand{\Q}{\mathbb{Q}}$Para demonstrar que em qualquer intervalo aberto da reta existe um número racional, precisamos da propriedade arquimediana dos números reais:</p>
 
 > Se $r\in\R$, com $r>0$, então existe um número $n\in\N$ tal que $0<\frac{1}{n}<r$.
-
+ 
 <p>Agora, considere um intervalo aberto $I=(a,\,b)$, com $a$ e $b$ em $\R$ e $a<b$.</p>
 
 Temos três casos:
