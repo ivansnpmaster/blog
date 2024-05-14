@@ -2,7 +2,6 @@
 layout: post
 title: "Em qualquer intervalo aberto da reta existe um número racional"
 categories: matemática demonstração
-publicado: false
 ---
 
 <p>$\newcommand{\R}{\mathbb{R}}\newcommand{\N}{\mathbb{N}}\newcommand{\Q}{\mathbb{Q}}$Para demonstrar que em qualquer intervalo aberto da reta existe um número racional, precisamos da propriedade arquimediana dos números reais:</p>
