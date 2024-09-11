@@ -28,8 +28,7 @@ publicado: false
 <p>Após criar o projeto, podemos estruturar um documento mínimo para criação da nossa figura de interesse:</p>
 
 <!-- Exemplo de código LaTeX -->
-<pre><code class="language-latex">
-\documentclass{article}
+<pre><code class="language-latex">\documentclass{article}
 \begin{document}
 Hello, world!
 \end{document}
