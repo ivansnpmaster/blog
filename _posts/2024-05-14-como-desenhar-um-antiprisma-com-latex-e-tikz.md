@@ -66,4 +66,4 @@ $$P_3=(r\cos(3\cdot\alpha),\,r\sen(3\cdot\alpha))=(r\cos(3\cdot 120^\circ),\,r\s
 
 <p>Logo, construiremos o antiprisma a partir de três parâmetros: o número de lados $n$ do polígono regular da base, a altura $h$ e o raio $r$ da circunferência circunscrita à base.</p>
 
-<p>Assim, para desenhar o polígono da base precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$ com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b>foreach</b> (para cada), que possui o seguinte formato:</p>
+<p>Assim, para desenhar o polígono da base precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$ com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b><a href="https://tikz.dev/pgffor" target="_blank">foreach</a></b> (para cada), que possui o seguinte formato:</p>
