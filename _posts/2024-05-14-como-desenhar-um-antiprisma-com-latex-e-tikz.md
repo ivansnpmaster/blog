@@ -52,10 +52,14 @@ $$P=(r\cos(\alpha),\,r\sin(\alpha))$$
 
 <p>Agora, se queremos uma base sendo um polígono regular de $n$ lados, precisamos saber qual é o ângulo central a partir de $n$. É direto que o ângulo central vale $\alpha=\frac{360^\circ}{n}$. Note que múltiplos de $\alpha$ estão igualmente espaçados ao longo de toda a circunferência.</p>
 
-<p>Por exemplo, a partir da forma de $P$ e de $\alpha$, as coordenadas do triângulo equilátero são, para $\alpha=\frac{360^\circ}{3}$:</p>
+<p>Por exemplo, a partir da forma de $P$ e de $\alpha$, as coordenadas do triângulo equilátero são, para $\alpha=\frac{360^\circ}{3}=120^\circ$:</p>
 
 $$P_1=(r\cos(1\cdot\alpha),\,r\sin(1\cdot\alpha))=(r\cos(1\cdot 120^\circ),\,r\sin(1\cdot 120^\circ))$$
-$$P_2=(r\cos(2\cdot\alpha),\,r\sin(2\cdot\alpha))=(r\cos(2\cdot 240^\circ),\,r\sin(2\cdot 240^\circ))$$
-$$P_3=(r\cos(3\cdot\alpha),\,r\sin(3\cdot\alpha))=(r\cos(2\cdot 360^\circ),\,r\sin(2\cdot 360^\circ))$$
+$$P_2=(r\cos(2\cdot\alpha),\,r\sin(2\cdot\alpha))=(r\cos(2\cdot 120^\circ),\,r\sin(2\cdot 120^\circ))$$
+$$P_3=(r\cos(3\cdot\alpha),\,r\sin(3\cdot\alpha))=(r\cos(3\cdot 120^\circ),\,r\sin(3\cdot 120^\circ))$$
 
-<p>Os três pontos diferem-se apenas no arco, que são múltiplos de $\alpha$. Assim, precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$ com um segmento de reta através de algum procedimento iterativo.</p>
+<p>Os três pontos diferem-se apenas no valor do arco, que são múltiplos de $\alpha$. Além disso, surgiu um novo parâmetro para ser adicionado ao processo construtivo: o raio da circunferência circunscrita à base.</p>
+
+<p>Logo, construiremos o antiprisma a partir de três parâmetros: o número de lados $n$ do polígono regular da base, a altura $h$ e o raio $r$ da circunferência circunscrita à base.</p>
+
+<p>Assim, para desenhar o polígono da base precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$ com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b>foreach</b> (para cada), que possui o seguinte formato:</p>
