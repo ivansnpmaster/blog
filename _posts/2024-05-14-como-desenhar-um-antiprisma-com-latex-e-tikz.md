@@ -47,3 +47,15 @@ publicado: false
 <b>Considerando dois eixos $x$ e $y$ com intersecção no centro da circunferência que o polígono regular está inscrito, a coordenada de qualquer ponto dessa circunferência pode ser dada por:</b>
 
 $$P=(r\cos(\alpha),\,r\sin(\alpha))$$
+
+<p>As coordenadas de $P$ advém da aplicação das definições de seno e cosseno de um arco no triângulo retângulo.</p>
+
+<p>Agora, se queremos uma base sendo um polígono regular de $n$ lados, precisamos saber qual é o ângulo central a partir de $n$. É direto que o ângulo central vale $\alpha=\frac{360^\circ}{n}$. Note que múltiplos de $\alpha$ estão igualmente espaçados ao longo de toda a circunferência.</p>
+
+<p>Por exemplo, a partir da forma de $P$ e de $\alpha$, as coordenadas do triângulo equilátero são, para $\alpha=\frac{360^\circ}{3}$:</p>
+
+$$P_1=(r\cos(1\cdot\alpha),\,r\sin(1\cdot\alpha))=(r\cos(1\cdot 120^\circ),\,r\sin(1\cdot 120^\circ))$$
+$$P_2=(r\cos(2\cdot\alpha),\,r\sin(2\cdot\alpha))=(r\cos(2\cdot 240^\circ),\,r\sin(2\cdot 240^\circ))$$
+$$P_3=(r\cos(3\cdot\alpha),\,r\sin(3\cdot\alpha))=(r\cos(2\cdot 360^\circ),\,r\sin(2\cdot 360^\circ))$$
+
+<p>Os três pontos diferem-se apenas no arco, que são múltiplos de $\alpha$. Assim, precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$ com um segmento de reta através de algum procedimento iterativo.</p>
