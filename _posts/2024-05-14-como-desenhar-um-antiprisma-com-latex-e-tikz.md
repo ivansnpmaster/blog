@@ -5,14 +5,9 @@ categories: matemática computação latex tikz
 publicado: false
 ---
 
-<!-- Adicionando CSS do Highlight.js -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css">
-<!-- Adicionando JS do Highlight.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<!-- Adicionando suporte a LaTeX -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/latex.min.js"></script>
-
-<!-- Inicializando o Highlight.js -->
 <script>hljs.highlightAll();</script>
 
 <p>Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b> regular.</p> Talvez você conheça o <b>prisma</b> regular e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).
@@ -29,8 +24,8 @@ publicado: false
 
 <p>Após criar o projeto, podemos estruturar um documento mínimo para criação da nossa figura de interesse:</p>
 
-<!-- Exemplo de código LaTeX -->
-<pre><code class="language-latex">\documentclass{standalone}
+<pre>
+<code class="language-latex">\documentclass{standalone}
 
 % carregando o pacote 'tikz' para criar desenhos
 \usepackage{tikz}
@@ -40,4 +35,5 @@ publicado: false
         % digitaremos macros da biblioteca 'tikz' para criar a figura dentro do ambiente 'tikzpicture'
     \end{tikzpicture}
 \end{document}
-</code></pre>
+</code>
+</pre>
