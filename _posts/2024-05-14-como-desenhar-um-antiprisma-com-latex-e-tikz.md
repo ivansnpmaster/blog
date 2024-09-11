@@ -5,9 +5,8 @@ categories: matemática computação latex tikz
 publicado: false
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 <p>Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b> regular.</p> Talvez você conheça o <b>prisma</b> regular e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).
 
@@ -17,13 +16,12 @@ publicado: false
 
 <p>Agora fica a pergunta: como criar esse tipo de desenho com $\LaTeX$ e Tikz?</p>
 
-<p>Eu costumo utilizar o <a href="https://pt.overleaf.com/">Overleaf</a> para escrever documentos com $\LaTeX$, mas você pode utilizar outro de sua preferência.</p>
+<p>Eu costumo utilizar o <a href="https://pt.overleaf.com/" target="_blank">Overleaf</a> para escrever documentos com $\LaTeX$, mas você pode utilizar outro de sua preferência.</p>
 
 <p>Após criar o projeto, podemos estruturar um documento mínimo para criação da nossa figura de interesse:</p>
 
 <pre><code class="language-latex">
-\documentclass{article}
-\begin{document}
-    Hello, world!
-\end{document}
+\begin{equation}
+E = mc^2
+\end{equation}
 </code></pre>
