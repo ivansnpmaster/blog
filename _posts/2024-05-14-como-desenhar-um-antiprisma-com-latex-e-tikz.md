@@ -5,8 +5,15 @@ categories: matemática computação latex tikz
 publicado: false
 ---
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<!-- Adicionando CSS do Highlight.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css">
+<!-- Adicionando JS do Highlight.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<!-- Adicionando suporte a LaTeX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/latex.min.js"></script>
+
+<!-- Inicializando o Highlight.js -->
+<script>hljs.highlightAll();</script>
 
 <p>Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b> regular.</p> Talvez você conheça o <b>prisma</b> regular e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).
 
@@ -20,8 +27,10 @@ publicado: false
 
 <p>Após criar o projeto, podemos estruturar um documento mínimo para criação da nossa figura de interesse:</p>
 
+<!-- Exemplo de código LaTeX -->
 <pre><code class="language-latex">
-\begin{equation}
-E = mc^2
-\end{equation}
+\documentclass{article}
+\begin{document}
+Hello, world!
+\end{document}
 </code></pre>
