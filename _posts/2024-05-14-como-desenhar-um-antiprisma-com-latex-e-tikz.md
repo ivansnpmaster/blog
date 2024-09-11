@@ -38,7 +38,7 @@ publicado: false
 </code>
 </pre>
 
-Vamos criar um comando/macro para desenhar um antiprisma regular a partir de alguns parâmetros. Olhando para a forma do antiprisma, seria interessante parametrizar sua construção a partir de, inicialmente, dois parâmetros: o <b>número de lados</b> $n$ da base e a <b>altura</b> $h$. 
+<p>Vamos criar um comando/macro para desenhar um antiprisma regular a partir de alguns parâmetros. Olhando para a forma do antiprisma, seria interessante parametrizar sua construção a partir de, inicialmente, dois parâmetros: o <b>número de lados</b> $n$ da base e a <b>altura</b> $h$.</p>
 
 <p>Ainda precisamos de outra informação, mas antes de botar a mão na massa, precisamos lembrar de uma informação importante sobre polígonos regulares: eles sempre estão inscritos (dentro) em uma circunferência. Isto é, todos os seus vértices estão na circunferência. Veja alguns casos:</p>
 
