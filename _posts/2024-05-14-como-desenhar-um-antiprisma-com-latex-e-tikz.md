@@ -2,7 +2,7 @@
 layout: post
 title: "Como desenhar um antiprisma regular com LaTeX e TikZ?"
 categories: matemática computação latex tikz
-publicado: true
+publicado: false
 ---
 
 <p>Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b> regular.</p> Talvez você conheça o <b>prisma</b> regular e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).
