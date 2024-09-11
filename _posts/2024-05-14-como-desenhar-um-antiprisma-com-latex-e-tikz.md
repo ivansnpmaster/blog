@@ -18,7 +18,7 @@ publicado: false
 
 <img src="/blog/assets/img/2024/05/14/prismas_e_antiprismas_regulares.png" alt="Comparação entre prismas e antiprismas" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
-<p>Agora fica a pergunta: como criar esse tipo de desenho com $\LaTeX$ e Tikz?</p>
+> Agora fica a pergunta: como criar esse tipo de desenho com $\LaTeX$ e Tikz?
 
 <p>Eu costumo utilizar o <a href="https://pt.overleaf.com/" target="_blank">Overleaf</a> para escrever documentos com $\LaTeX$, mas você pode utilizar outro de sua preferência.</p>
 
@@ -27,13 +27,23 @@ publicado: false
 <pre>
 <code class="language-latex">\documentclass{standalone}
 
-% carregando o pacote 'tikz' para criar desenhos
+% pacote 'tikz' para criar desenhos
 \usepackage{tikz}
 
 \begin{document}
     \begin{tikzpicture}
-        % digitaremos macros da biblioteca 'tikz' para criar a figura dentro do ambiente 'tikzpicture'
+        % conteúdo
     \end{tikzpicture}
 \end{document}
 </code>
 </pre>
+
+Vamos criar um comando/macro para desenhar um antiprisma regular a partir de alguns parâmetros. Olhando para a forma do antiprisma, seria interessante parametrizar sua construção a partir de, inicialmente, dois parâmetros: o <b>número de lados</b> $n$ da base e a <b>altura</b> $h$. 
+
+<p>Ainda precisamos de outra informação, mas antes de botar a mão na massa, precisamos lembrar de uma informação importante sobre polígonos regulares: eles sempre estão inscritos (dentro) em uma circunferência. Isto é, todos os seus vértices estão na circunferência. Veja alguns casos:</p>
+
+// Mostrar casos
+
+<b>Considerando dois eixos $x$ e $y$ com intersecção no centro da circunferência que o polígono regular está inscrito, a coordenada de qualquer ponto dessa circunferência pode ser dada por:</b>
+
+$$P=(r\cos(\alpha),\,r\sin(\alpha))$$
