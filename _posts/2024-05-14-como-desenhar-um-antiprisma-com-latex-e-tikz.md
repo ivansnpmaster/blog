@@ -66,7 +66,7 @@ $$P_3=(r\cos(3\cdot\alpha),\,r\sen(3\cdot\alpha))=(r\cos(3\cdot 120^\circ),\,r\s
 
 <p>Logo, construiremos o antiprisma a partir de três parâmetros: o número de lados $n$ do polígono regular da base, a altura $h$ e o raio $r$ da circunferência circunscrita à base.</p>
 
-<p>Assim, para desenhar o polígono da base precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$ com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b><a href="https://tikz.dev/pgffor" target="_blank">foreach</a></b> (para cada). Mas antes de montá-lo, é interessante definirmos a estrutura básica de um novo comando:</p>
+<p>Assim, para desenhar o polígono da base precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$ com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b><a href="https://tikz.dev/pgffor" target="_blank">foreach</a></b> (para cada). Mas antes de montá-lo, é interessante sabermos como criar variáveis dentro do ambiente <b>tikzpicture</b>:</p>
 
 <pre>
 <code class="language-latex">\documentclass{standalone}
@@ -79,8 +79,31 @@ $$P_3=(r\cos(3\cdot\alpha),\,r\sen(3\cdot\alpha))=(r\cos(3\cdot 120^\circ),\,r\s
         \pgfmathsetmacro{\n}{3} % lados do polígono
         \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+        \pgfmathsetmacro{\h}{3} % altura do antiprisma
 
-        \foreach \i in {1,2,3}
+    \end{tikzpicture}
+\end{document}
+</code>
+</pre>
+
+Conseguimos criar uma variável com o macro <b>\pgfmathsetmacro{identificador}{valor}</b>. Criamos as quatro variáveis que precisaremos para desenhar o antiprisma, mas três delas com valores chumbados que vamos parametrizar depois.
+
+Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. Fique à vontade para mudar o valor de $n$ e ver como ele impacta na construção da figura.
+
+<pre>
+<code class="language-latex">\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{3} % lados do polígono
+        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+        \pgfmathsetmacro{\h}{3} % altura do antiprisma
+
+        \foreach \i in {1,...,\n}
         {
             \draw ({\r*cos(\i*\a)}, {\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)}, {\r*sin((\i+1)*\a)});
         }
@@ -88,3 +111,5 @@ $$P_3=(r\cos(3\cdot\alpha),\,r\sen(3\cdot\alpha))=(r\cos(3\cdot 120^\circ),\,r\s
 \end{document}
 </code>
 </pre>
+
+Que produz a seguinte figura:
