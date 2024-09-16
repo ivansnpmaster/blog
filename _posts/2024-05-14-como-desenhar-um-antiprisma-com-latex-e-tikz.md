@@ -92,14 +92,13 @@ $$P_i=(r\cos(i\cdot\alpha),\,r\sen(i\cdot\alpha))$$
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{3} % lados do polígono
-        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita
+        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita à base
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
-        \pgfmathsetmacro{\h}{3} % altura do antiprisma
 
     \end{tikzpicture}
 \end{document}</code></pre>
 
-Conseguimos criar uma variável com o macro <b>\pgfmathsetmacro{identificador}{valor}</b>. Criamos as quatro variáveis que precisaremos para desenhar o antiprisma, mas três delas com valores chumbados que vamos parametrizar depois.
+Conseguimos criar uma variável com o macro <b>\pgfmathsetmacro{identificador}{valor}</b>. Criamos três variáveis que precisaremos para desenhar o antiprisma, mas com valores chumbados que vamos parametrizar depois.
 
 Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. Fique à vontade para mudar o valor de $n$ e ver como ele impacta na construção da figura.
 
@@ -112,15 +111,14 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{3} % lados do polígono
-        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita
+        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita à base
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
-        \pgfmathsetmacro{\h}{3} % altura do antiprisma
 
         \foreach \i in {1,...,\n}
         {
-            \draw ({\r*cos(\i*\a)}, {\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)}, {\r*sin((\i+1)*\a)});
+            \draw ({\i*\a}:\r) -- ({(\i+1)*\a}:\r);
         }
     \end{tikzpicture}
 \end{document}</code></pre>
 
-Que produz a seguinte figura:
+Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar o ponto $P_i$ com o $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha,\,r)$, que produz a seguinte figura:
