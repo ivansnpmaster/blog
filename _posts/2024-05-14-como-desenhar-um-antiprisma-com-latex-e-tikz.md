@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Como desenhar um antiprisma regular com LaTeX e TikZ?"
+title: "Como desenhar um antiprisma com LaTeX e TikZ?"
 categories: matemática computação latex tikz
 publicado: false
 ---
