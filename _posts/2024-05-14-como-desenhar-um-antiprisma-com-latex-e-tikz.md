@@ -20,7 +20,7 @@ publicado: false
 <img src="/blog/assets/img/2024/05/14/prismas_e_antiprismas_regulares.png" alt="Comparação entre prismas e antiprismas" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
 
-> Agora fica a pergunta: como criar esse tipo de desenho com $\LaTeX$ e Tikz?
+> Agora fica a pergunta: como criar esse tipo de desenho com $\LaTeX$ e TikZ?
 
 <p>Eu costumo utilizar o <a href="https://pt.overleaf.com/" target="_blank">Overleaf</a> para escrever documentos com $\LaTeX$, mas você pode utilizar outro de sua preferência.</p>
 
