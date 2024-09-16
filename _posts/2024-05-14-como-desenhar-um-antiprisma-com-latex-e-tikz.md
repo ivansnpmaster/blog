@@ -54,7 +54,12 @@ $$P=(r\cos(\alpha),\,r\sen(\alpha))$$
 
 <p>Por exemplo, a partir da forma de $P$ e de $\alpha$, as coordenadas do triângulo equilátero são, para $\alpha=\frac{360^\circ}{3}=120^\circ$:</p>
 
-$$P_1=(r\cos(1\cdot\alpha),\,r\sen(1\cdot\alpha))=(r\cos(1\cdot 120^\circ),\,r\sen(1\cdot 120^\circ))$$
+$$
+\begin{align*}
+    P_1=(r\cos(1\cdot\alpha),\,r\sen(1\cdot\alpha))\\
+    &=(r\cos(1\cdot 120^\circ),\,r\sen(1\cdot 120^\circ))
+\end{align*}
+$$
 
 $$P_2=(r\cos(2\cdot\alpha),\,r\sen(2\cdot\alpha))=(r\cos(2\cdot 120^\circ),\,r\sen(2\cdot 120^\circ))$$
 
