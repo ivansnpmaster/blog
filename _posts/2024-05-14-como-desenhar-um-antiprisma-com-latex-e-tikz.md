@@ -46,7 +46,7 @@ publicado: false
 
 <img src="/blog/assets/img/2024/05/14/polígonos-regulares.png" alt="Polígonos regulares" style="width: 100%; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
-<p>Considerando dois eixos $x$ e $y$ com intersecção no centro da circunferência que o polígono regular está inscrito, a coordenada de qualquer ponto dessa circunferência pode ser dada por:</p>
+<p>Considerando dois eixos $x$ e $y$ com intersecção no centro da circunferência que o polígono regular está inscrito, as coordenadas de qualquer ponto dessa circunferência são:</p>
 
 $$P=(r\cos(\alpha),\,r\sen(\alpha))$$
 
