@@ -46,7 +46,7 @@ publicado: false
 
 $$P=(r\cos(\alpha),\,r\sen(\alpha))$$
 
-<p>As coordenadas de $P$ advém da aplicação das definições de seno e cosseno de um arco no triângulo retângulo.</p>
+<p>As coordenadas de $P$ advém da conversão de coordenadas polares para coordenadas cartesianas.</p>
 
 <p>Agora, se queremos uma base sendo um polígono regular de $n$ lados, precisamos saber qual é o ângulo central a partir de $n$. É direto que o ângulo central vale $\alpha=\frac{360^\circ}{n}$. Note que múltiplos de $\alpha$ estão igualmente espaçados ao longo de toda a circunferência.</p>
 
