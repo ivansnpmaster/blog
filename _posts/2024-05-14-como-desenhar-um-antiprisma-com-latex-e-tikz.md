@@ -5,9 +5,9 @@ categories: matemática computação latex tikz
 publicado: false
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/latex.min.js"></script>
+<link rel="stylesheet" href="/blog/assets/js/highlight-code/theme.css">
+<script src="/blog/assets/js/highlight-code/index.js"></script>
+<script src="/blog/assets/js/highlight-code/latex.js"></script>
 <script>hljs.highlightAll();</script>
 
 <p>$\DeclareMathOperator{\sen}{sen}$Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b>.</p> Talvez você conheça o <b>prisma</b> e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).
