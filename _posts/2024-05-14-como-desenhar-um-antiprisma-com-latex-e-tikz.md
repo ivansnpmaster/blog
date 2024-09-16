@@ -40,8 +40,8 @@ publicado: false
 
 <p>Como a base do antiprisma é um polígono regular, precisamos de uma outra informação: todo polígono regular está inscrito (dentro) em uma circunferência. Isto é, todos os seus vértices estão na circunferência e sempre a uma distância $r$. Veja alguns casos:</p>
 
-<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3-n4.png" alt="Polígonos regulares" style="width: 100%; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
-<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n5-n6.png" alt="Polígonos regulares" style="width: 100%; margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3-n4.png" alt="Polígonos regulares" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n5-n6.png" alt="Polígonos regulares" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px;">
 
 <p>Considerando dois eixos $x$ e $y$ com intersecção no centro da circunferência que o polígono regular está inscrito, as coordenadas de qualquer ponto dessa circunferência são:</p>
 
@@ -122,6 +122,6 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
     \end{tikzpicture}
 \end{document}</code></pre>
 
-Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar o ponto $P_i$ com o $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$, que produz a seguinte figura:
+Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar $P_i$ com $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$, que produz a seguinte figura:
 
-<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
