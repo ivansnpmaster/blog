@@ -124,4 +124,4 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
 
 Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar $P_i$ com $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$, que produz a seguinte figura:
 
-<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 20px;">
