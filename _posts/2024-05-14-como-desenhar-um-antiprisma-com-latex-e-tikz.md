@@ -73,7 +73,11 @@ $$
 \end{align*}
 $$
 
-<p>Os três pontos diferem-se apenas no valor do arco, que são múltiplos de $\alpha$. Além disso, surgiu um novo parâmetro para ser adicionado ao processo construtivo: o raio da circunferência circunscrita à base.</p>
+<p>Os três pontos diferem-se apenas no valor do arco, que são múltiplos de $\alpha$. Note que a forma geral para $P$ é:</p>
+
+$$P_i=(r\cos(i\cdot\alpha),\,r\sen(i\cdot\alpha))$$
+
+<p>Além disso, surgiu um novo parâmetro para ser adicionado ao processo construtivo: o raio da circunferência circunscrita à base.</p>
 
 <p>Logo, construiremos o antiprisma a partir de três parâmetros: o número de lados $n$ do polígono regular da base, a altura $h$ e o raio $r$ da circunferência circunscrita à base.</p>
 
