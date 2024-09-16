@@ -44,7 +44,7 @@ publicado: false
 
 <p>Como a base do antiprisma é um polígono regular, precisamos de uma outra informação: todo polígono regular está inscrito (dentro) em uma circunferência. Isto é, todos os seus vértices estão na circunferência e sempre a uma distância $r$. Veja alguns casos:</p>
 
-<img src="/blog/assets/img/2024/05/14/polígonos-regulares.png" alt="Polígonos regulares" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/polígonos-regulares.png" alt="Polígonos regulares" style="width: 100%; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
 <p>Considerando dois eixos $x$ e $y$ com intersecção no centro da circunferência que o polígono regular está inscrito, a coordenada de qualquer ponto dessa circunferência pode ser dada por:</p>
 
