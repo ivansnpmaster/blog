@@ -36,8 +36,7 @@ publicado: false
     \begin{tikzpicture}
         % conteúdo
     \end{tikzpicture}
-\end{document}
-</code>
+\end{document}</code>
 </pre>
 
 <p>Vamos criar um comando/macro para desenhar um antiprisma regular a partir de alguns parâmetros. Olhando para a forma do antiprisma, seria interessante parametrizar sua construção a partir de, inicialmente, dois parâmetros: o <b>número de lados</b> $n$ da base e a <b>altura</b> $h$.</p>
@@ -82,8 +81,7 @@ $$P_3=(r\cos(3\cdot\alpha),\,r\sen(3\cdot\alpha))=(r\cos(3\cdot 120^\circ),\,r\s
         \pgfmathsetmacro{\h}{3} % altura do antiprisma
 
     \end{tikzpicture}
-\end{document}
-</code>
+\end{document}</code>
 </pre>
 
 Conseguimos criar uma variável com o macro <b>\pgfmathsetmacro{identificador}{valor}</b>. Criamos as quatro variáveis que precisaremos para desenhar o antiprisma, mas três delas com valores chumbados que vamos parametrizar depois.
@@ -108,8 +106,7 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
             \draw ({\r*cos(\i*\a)}, {\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)}, {\r*sin((\i+1)*\a)});
         }
     \end{tikzpicture}
-\end{document}
-</code>
+\end{document}</code>
 </pre>
 
 Que produz a seguinte figura:
