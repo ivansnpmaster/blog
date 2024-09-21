@@ -187,3 +187,39 @@ Algumas figuras produzidas variando o valor de $n$:
 
 <img src="/blog/assets/img/2024/05/14/bases-antiprisma-n3-n4.png" alt="Bases de antiprismas com 3 e 4 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 40px;">
 <img src="/blog/assets/img/2024/05/14/bases-antiprisma-n5-n6.png" alt="Bases de antiprismas com 5 e 6 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px;">
+
+Agora, considerando $B_1$ e $B_2$ como sendo o conjunto de vértices da base inferior e superior do antiprisma, respectivamente, podemos conectar o vértice $P_i\in B_1$ com o vértice $P_j\in B_2$, com $i=j$, e também conectar o mesmo $P_j$ com o $P_{i+1}\in B_1$:
+
+<pre>
+<code class="language-latex">\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{3} % lados do polígono
+        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita à base
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+        \pgfmathsetmacro{\h}{3} % altura do antiprisma
+
+        \foreach \i in {1,...,\n}
+        {
+            % formato (x,0,z)
+            \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
+            % formato (x,h,z)
+            \draw ({\r*cos(\i*\a+\a/2)},\h,{\r*sin(\i*\a+\a/2)}) -- ({\r*cos((\i+1)*\a+\a/2)},\h,{\r*sin((\i+1)*\a+\a/2)});
+
+            % conectando os vértices das bases
+            % P_i com P_j
+            \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos(\i*\a+\a/2)},\h,{\r*sin(\i*\a+\a/2)});
+            % P_j com P_{i+1}
+            \draw ({\r*cos(\i*\a+\a/2)},\h,{\r*sin(\i*\a+\a/2)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
+        }
+    \end{tikzpicture}
+\end{document}</code></pre>
+
+Desenhamos dois novos segmentos em cada iteração para formar os triângulos da lateral do antiprisma. Veja o resultado para alguns valores de $n$:
+
+<img src="/blog/assets/img/2024/05/14/antiprismas-wireframe-n3-n4.png" alt="Wireframes de antiprismas com 3 e 4 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 40px;">
+<img src="/blog/assets/img/2024/05/14/antiprismas-wireframe-n5-n6.png" alt="Wireframes de antiprismas com 5 e 6 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px;">
