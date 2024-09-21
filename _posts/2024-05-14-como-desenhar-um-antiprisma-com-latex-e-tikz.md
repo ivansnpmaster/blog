@@ -125,3 +125,31 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
 Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar $P_i$ com $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$, que produz a seguinte figura:
 
 <img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 20px;">
+
+Entretanto, o formato polar $(\alpha:r)$ serve para pontos no plano, mas nosso antiprisma vive em três dimensões. Por isso, é mais conveniente utilizarmos o formato cartesiano de especificação de coordenada, isto é, através de $(x,\,y,\,z)$. Além disso, precisamos que as bases do antiprisma estejam paralelas ao plano $xz$, ou seja, "paralelas ao chão". Basta trocar o cálculo realizado para a coordenada $y$ do ponto para a coordenada $z$, deixando $y$ com um valor constante qualquer:
+
+<pre>
+<code class="language-latex">\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{3} % lados do polígono
+        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita à base
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        \foreach \i in {1,...,\n}
+        {
+            \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
+        }
+    \end{tikzpicture}
+\end{document}</code></pre>
+
+Que produz a seguinte figura:
+
+<img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 20px;">
+
+Em um primeiro momento pode parecer estranho o resultado acima. Por mais incrível que pareça, ele está correto. Ele parece "torto" porque a base cartesiana do espaço "default" do TikZ é da seguinte forma:
+
