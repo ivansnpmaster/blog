@@ -124,7 +124,7 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
 
 Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar $P_i$ com $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$, que produz a seguinte figura:
 
-<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
 Entretanto, o formato polar $(\alpha:r)$ serve para pontos no plano, mas nosso antiprisma vive em três dimensões. Por isso, é mais conveniente utilizarmos o formato cartesiano de especificação de coordenada, isto é, através de $(x,\,y,\,z)$. Além disso, precisamos que as bases do antiprisma estejam paralelas ao plano $xz$, ou seja, "paralelas ao chão". Basta trocar o cálculo realizado para a coordenada $y$ do ponto para a coordenada $z$, deixando $y$ com um valor constante qualquer:
 
@@ -149,7 +149,8 @@ Entretanto, o formato polar $(\alpha:r)$ serve para pontos no plano, mas nosso a
 
 Que produz a seguinte figura:
 
-<img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco.png" alt="Triângulo equilátero no plano xz" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-Em um primeiro momento pode parecer estranho o resultado acima. Por mais incrível que pareça, ele está correto. Ele parece "torto" porque a base cartesiana do espaço "default" do TikZ é da seguinte forma:
+Em um primeiro momento pode parecer estranho o resultado acima. Por incrível que pareça, ele está correto. Veja o mesmo triângulo em comparação com a base cartesiana:
 
+<img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco-base.png" alt="Triângulo equilátero no plano xz em uma base padrão do espaço euclidiano" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
