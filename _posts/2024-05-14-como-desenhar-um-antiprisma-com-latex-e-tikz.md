@@ -145,6 +145,7 @@ Entretanto, o formato polar $(\alpha:r)$ serve para pontos no plano, mas nosso a
 
         \foreach \i in {1,...,\n}
         {
+            % formato (x,0,z)
             \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
         }
     \end{tikzpicture}
@@ -157,3 +158,33 @@ Que produz a seguinte figura:
 Em um primeiro momento pode parecer estranho o resultado acima. Por incrível que pareça, ele está correto. Veja o mesmo triângulo em comparação com a base cartesiana $\\{\vtu{x},\,\vtu{y},\,\vtu{z}\\}$:
 
 <img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco-base.png" alt="Triângulo equilátero no plano xz em uma base padrão do espaço euclidiano" style="width: 100%; max-width: 230px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+
+Podemos deixar a primeira base do antiprisma como sendo o polígono acima e desenhar uma segunda base da mesma forma, mas alterando a coordenada $y$ com uma nova variável $h$ que representará a altura do nosso sólido, bem como adicionar metade do ângulo central em cada ângulo de seus pontos:
+
+<pre>
+<code class="language-latex">\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{3} % lados do polígono
+        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita à base
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+        \pgfmathsetmacro{\h}{3} % altura do antiprisma
+
+        \foreach \i in {1,...,\n}
+        {
+            % formato (x,0,z)
+            \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
+            % formato (x,h,z)
+            \draw ({\r*cos(\i*\a+\a/2)},\h,{\r*sin(\i*\a+\a/2)}) -- ({\r*cos((\i+1)*\a+\a/2)},\h,{\r*sin((\i+1)*\a+\a/2)});
+        }
+    \end{tikzpicture}
+\end{document}</code></pre>
+
+Algumas figuras produzidas variando o valor de $n$:
+
+<img src="/blog/assets/img/2024/05/14/bases-antiprisma-n3-n4.png" alt="Bases de antiprismas com 3 e 4 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/05/14/bases-antiprisma-n5-n6.png" alt="Bases de antiprismas com 5 e 6 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px;">
