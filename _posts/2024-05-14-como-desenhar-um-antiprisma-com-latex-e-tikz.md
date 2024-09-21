@@ -185,5 +185,5 @@ Podemos deixar a primeira base do antiprisma como sendo o polígono acima e dese
 
 Algumas figuras produzidas variando o valor de $n$:
 
-<img src="/blog/assets/img/2024/05/14/bases-antiprisma-n3-n4.png" alt="Bases de antiprismas com 3 e 4 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 40px;">
+<img src="/blog/assets/img/2024/05/14/bases-antiprisma-n3-n4.png" alt="Bases de antiprismas com 3 e 4 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 40px;">
 <img src="/blog/assets/img/2024/05/14/bases-antiprisma-n5-n6.png" alt="Bases de antiprismas com 5 e 6 lados" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px;">
