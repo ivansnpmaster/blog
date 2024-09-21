@@ -12,7 +12,7 @@ publicado: false
 
 <p>$\DeclareMathOperator{\sen}{sen}\newcommand{\vtu}[1]{\hat{\textbf{#1}}}$Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b>. Talvez você conheça o <b>prisma</b> e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).</p>
 
-<p>Os antiprismas são poliedros convexos muito parecidos com prismas. Para começar, a ideia de base do prisma é a mesma para o antiprisma. Eles são formados por duas cópias paralelas de um <b>mesmo</b> polígono convexo, também chamadas de diretrizes. No prisma, as bases são conectadas por uma faixa lateral formada por quadriláteros, e no antiprisma a faixa é composta por triângulos. Os vértices do antiprisma também são dados pelos vértices de suas bases e uma das bases sempre está a uma diferença de $\pi/n$ da outra (metade do ângulo central), onde $n$ é o número de lados da diretriz.</p>
+<p>Os antiprismas são poliedros convexos muito parecidos com prismas. Para começar, a ideia de base do prisma é a mesma para o antiprisma. Eles são formados por duas cópias paralelas de um <b>mesmo</b> polígono regular, também chamadas de diretrizes. No prisma, as bases são conectadas por uma faixa lateral formada por quadriláteros, e no antiprisma a faixa é composta por triângulos. Os vértices do antiprisma também são dados pelos vértices de suas bases e uma das bases sempre está a uma diferença de $\pi/n$ da outra (metade do ângulo central), onde $n$ é o número de lados da diretriz.</p>
 
 <p>Veja uma comparação entre prismas e antiprismas, na primeira e segunda linha, respectivamente:</p>
 
@@ -115,7 +115,9 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
         \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita à base
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
 
-        \foreach \i in {1,...,\n}
+        \pgfmathsetmacro{\nn}{\n-1} % para criar a lista de índices no foreach começando em zero
+
+        \foreach \i in {0,...,\nn}
         {
             \draw ({\i*\a}:\r) -- ({(\i+1)*\a}:\r);
         }
@@ -140,7 +142,9 @@ Entretanto, o formato polar $(\alpha:r)$ serve para pontos no plano, mas nosso a
         \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita à base
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
 
-        \foreach \i in {1,...,\n}
+        \pgfmathsetmacro{\nn}{\n-1} % para criar a lista de índices no foreach começando em zero
+
+        \foreach \i in {0,...,\nn}
         {
             % formato (x,0,z)
             \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
@@ -171,7 +175,9 @@ Podemos deixar a primeira base do antiprisma como sendo o polígono acima e dese
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
         \pgfmathsetmacro{\h}{3} % altura do antiprisma
 
-        \foreach \i in {1,...,\n}
+        \pgfmathsetmacro{\nn}{\n-1} % para criar a lista de índices no foreach começando em zero
+
+        \foreach \i in {0,...,\nn}
         {
             % formato (x,0,z)
             \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
@@ -201,7 +207,9 @@ Agora, considerando $B_1$ e $B_2$ como sendo o conjunto de vértices da base inf
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
         \pgfmathsetmacro{\h}{3} % altura do antiprisma
 
-        \foreach \i in {1,...,\n}
+        \pgfmathsetmacro{\nn}{\n-1} % para criar a lista de índices no foreach começando em zero
+
+        \foreach \i in {0,...,\nn}
         {
             % formato (x,0,z)
             \draw ({\r*cos(\i*\a)},0,{\r*sin(\i*\a)}) -- ({\r*cos((\i+1)*\a)},0,{\r*sin((\i+1)*\a)});
