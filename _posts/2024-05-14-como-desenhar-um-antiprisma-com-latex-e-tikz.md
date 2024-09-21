@@ -9,8 +9,11 @@ publicado: false
 <script src="/blog/assets/js/highlight-code/index.js"></script>
 <script src="/blog/assets/js/highlight-code/latex.js"></script>
 <script>hljs.highlightAll();</script>
-
-<p>$\DeclareMathOperator{\sen}{sen}$Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b>.</p> Talvez você conheça o <b>prisma</b> e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).
+$
+    \DeclareMathOperator{\sen}{sen}
+    \newcommand{\vtu}[1]{\hat{\textbf{#1}}}
+$
+<p>Estou escrevendo este post para aumentar a quantidade de imagens disponívels online de um poliedro não muito conhecido: o <b>antiprisma</b>.</p> Talvez você conheça o <b>prisma</b> e tenha intuído que o antiprisma seja, de alguma forma, similar. E você está certo(a).
 
 <p>Os antiprismas são poliedros convexos muito parecidos com prismas regulares. Para começar, a ideia de base do prisma é a mesma para o antiprisma. Eles são formados por duas cópias paralelas de um <b>mesmo</b> polígono convexo, também chamados de diretrizes. No prisma, as bases são conectadas por uma faixa lateral formada por quadriláteros, e no antiprisma a faixa é composta por triângulos. Os vértices do antiprisma também são dados pelos vértices de suas bases e uma das bases sempre está a uma diferença de $\pi/n$ da outra (metade do ângulo central), onde $n$ é o número de lados da diretriz.</p>
 
@@ -151,6 +154,6 @@ Que produz a seguinte figura:
 
 <img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco.png" alt="Triângulo equilátero no plano xz" style="width: 100%; max-width: 230px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-Em um primeiro momento pode parecer estranho o resultado acima. Por incrível que pareça, ele está correto. Veja o mesmo triângulo em comparação com a base cartesiana $\\{(1,\,0,\,0),\,(0,\,1,\,0),\,(0,\,0,\,1)\\}$:
+Em um primeiro momento pode parecer estranho o resultado acima. Por incrível que pareça, ele está correto. Veja o mesmo triângulo em comparação com a base cartesiana $\\{\vtu{x},\,\vtu{y},\,\vtu{z}\\}$:
 
 <img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco-base.png" alt="Triângulo equilátero no plano xz em uma base padrão do espaço euclidiano" style="width: 100%; max-width: 230px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
