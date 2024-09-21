@@ -151,6 +151,6 @@ Que produz a seguinte figura:
 
 <img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco.png" alt="Triângulo equilátero no plano xz" style="width: 100%; max-width: 230px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-Em um primeiro momento pode parecer estranho o resultado acima. Por incrível que pareça, ele está correto. Veja o mesmo triângulo em comparação com a base cartesiana $\{(1,\,0,\,0),\,(0,\,1,\,0),\,(0,\,0,\,1)\}$:
+Em um primeiro momento pode parecer estranho o resultado acima. Por incrível que pareça, ele está correto. Veja o mesmo triângulo em comparação com a base cartesiana $\\{(1,\,0,\,0),\,(0,\,1,\,0),\,(0,\,0,\,1)\\}$:
 
 <img src="/blog/assets/img/2024/05/14/triangulo-equilatero-espaco-base.png" alt="Triângulo equilátero no plano xz em uma base padrão do espaço euclidiano" style="width: 100%; max-width: 230px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
