@@ -103,9 +103,9 @@ $$
 \end{align*}
 $$
 
-> Note que essa atribuição de pontos faz sempre o $n$-ésimo ponto ficar sempre com ângulo de $360^\circ$, independentemente do valor escolhido para $n$.</p>
+> Note que essa atribuição de pontos faz sempre o $n$-ésimo ponto ficar sempre com ângulo de $360^\circ$, independentemente do valor escolhido para $n$.
 
-<p>Assim, para desenhar o polígono precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$</p>. Conectar o $i$-ésimo com o $(i+1)$-ésimo ponto funciona mesmo quando $i=n$, pois o ângulo do ponto $(n+1)$ é igual ao ângulo do primeiro ponto, pela estrutura cíclica dos ângulos na circunferência.</p>
+<p>Assim, para desenhar o polígono precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$. Conectar o $i$-ésimo com o $(i+1)$-ésimo ponto funciona mesmo quando $i=n$, pois o ângulo do ponto $(n+1)$ é igual ao ângulo do primeiro ponto, pela estrutura cíclica dos ângulos na circunferência.</p>
 
 <p>Vamos realizar a conexão dos pontos com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b><a href="https://tikz.dev/pgffor" target="_blank">foreach</a></b> (para cada). Mas antes de montá-lo, é interessante sabermos como criar variáveis dentro do ambiente <b>tikzpicture</b>:</p>
 
