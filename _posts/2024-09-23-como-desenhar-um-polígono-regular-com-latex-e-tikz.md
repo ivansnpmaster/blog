@@ -103,7 +103,7 @@ $$
 \end{align*}
 $$
 
-> Note que essa atribuição de pontos faz sempre o $n$-ésimo ponto ficar sempre com ângulo de $360^\circ$, independentemente do valor escolhido para $n$.
+> Note que essa atribuição de pontos faz sempre o $n$-ésimo ponto ficar sempre com ângulo de {$360^\circ$}, independentemente do valor escolhido para $n$.
 
 <p>Assim, para desenhar o polígono precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$. Conectar o $i$-ésimo com o $(i+1)$-ésimo ponto funciona mesmo quando $i=n$, pois o ângulo do ponto $(n+1)$ é igual ao ângulo do primeiro ponto, pela estrutura cíclica dos ângulos na circunferência.</p>
 
@@ -151,3 +151,73 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
 Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar $P_i$ com $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$ do <b>tikz</b>, que produz a seguinte figura:
 
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+
+Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b> para cada segmento:
+
+<pre>
+<code class="language-latex">\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{3} % lados do polígono
+        \pgfmathsetmacro{\r}{2} % raio da circunferência circunscrita
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
+        {
+            % conectando P_i com P_{i+1}
+            \draw ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+        }
+    \end{tikzpicture}
+\end{document}</code></pre>
+
+Que gera o seguinte resultado:
+
+\inserir imagem
+
+Veja que desenhamos o segmento de reta que conecta $P_i$ com $P_{i+1}$ e posicionamos o número do vértice próximo de $P_i$. Nesse processo adicionamos um pequeno valor ao raio para que o número do vértice não fique no mesmo lugar de $P_i$.
+
+Temos o que é necessário para transformar o código acima em um comando de desenho. A ideia é deixar o valor $n$ e o raio $r$ parametrizados. Vamos criar um comando que aceita dois parâmetros. Para isso, crie um novo arquivo dentro do projeto chamado <b>polígono-regular.tex</b> com a seguinte estrutura base:
+
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+    % conteúdo do comando
+}</code></pre>
+
+Um comando com dois parâmetros em $\LaTeX$ é criado com o macro <b>\newcommand{\nomeComando}[número de parâmetros]{}</b>. Vamos copiar o código feito até aqui que desenha o polígono regular e fazer algumas alterações: vamos substituir onde estava $n$ e $r$ por <b>#1</b> e <b>#2</b>, respectivamente:
+
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{#1} % lados do polígono
+        \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
+        {
+            % conectando P_i com P_{i+1}
+            \draw ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+        }
+    \end{tikzpicture}
+}</code></pre>
+
+Com o código acima em um arquivo separado, podemos deixar apenas a invocação do comando no arquivo principal:
+
+<pre>
+<code class="language-latex">\documentclass{standalone}
+
+\usepackage{tikz}
+\input{polígono-regular}
+
+\begin{document}
+    \desenharPoligonoRegular{3}{2}
+\end{document}</code></pre>
+
+Perceba que importamos o arquivo contendo o comando criado com <b>\input{polígono-regular}</b> no preâmbulo do documento. Isso avisa o compilador que o comando definido no arquivo está disponível. Ao usar o comando <b>\desenharPoligonoRegular{3}{2}</b> estamos rodando o código para desenhar o polígono regular com $n=3$ e $r=2$. A imagem gerada não sofrerá alterações. Se testarmos alguns valores de $n$, teremos os seguintes resultados:
+
+<img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-nodes.png" alt="Polígonos regulares - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-nodes.png" alt="Polígonos regulares - pentágono e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
