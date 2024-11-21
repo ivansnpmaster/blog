@@ -211,21 +211,43 @@ Com o código acima em um arquivo separado, podemos deixar apenas a invocação 
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
+% importação do arquivo que contém a definição do comando
 \input{polígono-regular}
 
 \begin{document}
+    % utilização do comando
     \desenharPoligonoRegular{3}{2}
 \end{document}</code></pre>
 
-Perceba que importamos o arquivo contendo o comando criado com <b>\input{polígono-regular}</b> no preâmbulo do documento. Isso avisa o compilador que o comando definido no arquivo está disponível. Ao usar o comando <b>\desenharPoligonoRegular{3}{2}</b> estamos rodando o código para desenhar o polígono regular com $n=3$ e $r=2$. A imagem gerada não sofrerá alterações. Se testarmos alguns valores de $n$, teremos os seguintes resultados:
+<p>Perceba que importamos o arquivo contendo o comando criado com <b>\input{polígono-regular}</b> no preâmbulo do documento. Isso avisa o compilador que o comando definido no arquivo está disponível. Ao usar o comando <b>\desenharPoligonoRegular{3}{2}</b> estamos rodando o código para desenhar o polígono regular com $n=3$ e $r=2$. A imagem gerada não sofrerá alterações. Se testarmos alguns valores de $n$, teremos os seguintes resultados:</p>
 
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-nodes.png" alt="Polígonos regulares - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
-<img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-nodes.png" alt="Polígonos regulares - pentágono e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-nodes.png" alt="Polígonos regulares - pentágono e hexágono com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
-Perceba que todos os polígonos ficaram com o primeiro vértice em $\alpha$ e o último em $360^\circ$. Podemos utilizar o ambiente <b>scope</b> dentro do ambiente <b>tikzpicture</b> para "rotacionar a base cartesiana" em uma certa quantidade de graus sem precisar mudar as coordenadas dos vértices. A quantidade a ser rotacionada claramente depende de $n$, mas a pergunta que fica é: <i>quanto rotacionar?</i>. Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$:
+<p>Perceba que todos os polígonos ficaram com o primeiro vértice em $\alpha$ e o último em $360^\circ$. Podemos utilizar o ambiente <b>scope</b> dentro do ambiente <b>tikzpicture</b> para "rotacionar a base cartesiana" em uma certa quantidade de graus sem precisar mudar as coordenadas dos vértices. A quantidade a ser rotacionada claramente depende de $n$, mas a pergunta que fica é: <i>quanto rotacionar?</i>.</p>
 
-//inserir código
+<p>Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$, isto é, em $90^\circ-\alpha$:</p>
 
-Que produz as seguintes figuras para alguns valores de $n$:
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+    \begin{tikzpicture}
 
-//inserir figuras
+        \pgfmathsetmacro{\n}{#1} % lados do polígono
+        \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        % criando um escopo que rotaciona a base xy cartesiana em 90-\a graus no sentido anti-horário
+        \begin{scope}[rotate=90-\a]
+            \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
+            {
+                % conectando P_i com P_{i+1}
+                \draw ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+            }
+        \end{scope}
+    \end{tikzpicture}
+}</code></pre>
+
+<p>Que produz as seguintes figuras para alguns valores de $n$:</p>
+
+<img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-rotacionados.png" alt="Polígonos regulares rotacionados - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+<img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-rotacionados" alt="Polígonos regulares rotacionados - pentágono e hexágono com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
