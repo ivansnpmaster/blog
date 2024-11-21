@@ -176,7 +176,7 @@ Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b
 
 Que gera o seguinte resultado:
 
-\inserir imagem
+<img src="/blog/assets/img/2024/09/23/triângulo-equilátero-nodes.png" alt="Triângulo equilátero com nodes nos vértices" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
 Veja que desenhamos o segmento de reta que conecta $P_i$ com $P_{i+1}$ e posicionamos o número do vértice próximo de $P_i$. Nesse processo adicionamos um pequeno valor ao raio para que o número do vértice não fique no mesmo lugar de $P_i$.
 
