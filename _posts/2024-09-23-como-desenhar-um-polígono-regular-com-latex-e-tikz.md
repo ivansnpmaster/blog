@@ -320,7 +320,7 @@ $$
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-conexão-origem.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-<p>Para desenhar o node com o texto $r$, fiz da seguinte forma: dentro de um <b>scope</b> rotacionado em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$:</p>
+<p>Para desenhar o texto $r$ em vermelho, fiz o seguinte: dentro de um <b>scope</b> rotacionando a base cartesiana em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$ e mesmo ângulo $\alpha$:</p>
 
 <pre>
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
