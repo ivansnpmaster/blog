@@ -176,7 +176,7 @@ Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b
 
 Que gera o seguinte resultado:
 
-<img src="/blog/assets/img/2024/09/23/triângulo-equilátero-nodes.png" alt="Triângulo equilátero com nodes nos vértices" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+<img src="/blog/assets/img/2024/09/23/triângulo-equilátero-nodes.png" alt="Triângulo equilátero com nodes nos vértices" style="width: 100%; max-width: 170px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
 Veja que desenhamos o segmento de reta que conecta $P_i$ com $P_{i+1}$ e posicionamos o número do vértice próximo de $P_i$. Nesse processo adicionamos um pequeno valor ao raio para que o número do vértice não fique no mesmo lugar de $P_i$.
 
@@ -221,3 +221,11 @@ Perceba que importamos o arquivo contendo o comando criado com <b>\input{polígo
 
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-nodes.png" alt="Polígonos regulares - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-nodes.png" alt="Polígonos regulares - pentágono e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+
+Perceba que todos os polígonos ficaram com o primeiro vértice em $\alpha$ e o último em $360^\circ$. Podemos utilizar o ambiente <b>scope</b> dentro do ambiente <b>tikzpicture</b> para "rotacionar a base cartesiana" em uma certa quantidade de graus sem precisar mudar as coordenadas dos vértices. A quantidade a ser rotacionada claramente depende de $n$, mas a pergunta que fica é: <i>quanto rotacionar?</i>. Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$:
+
+//inserir código
+
+Que produz as seguintes figuras para alguns valores de $n$:
+
+//inserir figuras
