@@ -315,3 +315,7 @@ $$
 
     \end{tikzpicture}
 }</code></pre>
+
+<p>Que produz a seguinte figura:</p>
+
+<img src="/blog/assets/img/2024/09/23/polígono-regular-n3-conexão-origem.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
