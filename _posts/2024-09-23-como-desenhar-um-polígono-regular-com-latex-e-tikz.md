@@ -124,9 +124,9 @@ $$
     \end{tikzpicture}
 \end{document}</code></pre>
 
-Conseguimos criar uma variável com o macro <b>\pgfmathsetmacro{identificador}{valor}</b>. Criamos duas variáveis que precisaremos para desenhar o antiprisma: $n$ e $r$, mas com valores chumbados que vamos parametrizar depois. Foi criada também uma terceira variável $a$ para guardar o valor do ângulo central, a partir de $n$.
+<p>Conseguimos criar uma variável com o macro <b>\pgfmathsetmacro{identificador}{valor}</b>. Criamos duas variáveis que precisaremos para desenhar o antiprisma: $n$ e $r$, mas com valores chumbados que vamos parametrizar depois. Foi criada também uma terceira variável $a$ para guardar o valor do ângulo central, a partir de $n$.</p>
 
-Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. Fique à vontade para mudar o valor de $n$ e ver como ele impacta na construção da figura.
+<p>Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. Fique à vontade para mudar o valor de $n$ e ver como ele impacta na construção da figura.</p>
 
 <pre>
 <code class="language-latex">\documentclass{standalone}
@@ -148,11 +148,11 @@ Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. F
     \end{tikzpicture}
 \end{document}</code></pre>
 
-Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar $P_i$ com $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$ do <b>tikz</b>, que produz a seguinte figura:
+<p>Utilizamos o comando <b>\draw</b> para desenhar os segmentos de reta para conectar $P_i$ com $P_{i+1}$. Veja que as coordenadas foram escritas no formato polar $(\alpha:r)$ do <b>tikz</b>, que produz a seguinte figura:</p>
 
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3.png" alt="Polígono regular com 3 lados" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b> para cada segmento:
+<p>Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b> para cada segmento:</p>
 
 <pre>
 <code class="language-latex">\documentclass{standalone}
@@ -174,20 +174,20 @@ Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b
     \end{tikzpicture}
 \end{document}</code></pre>
 
-Que gera o seguinte resultado:
+<p>Que gera o seguinte resultado:</p>
 
 <img src="/blog/assets/img/2024/09/23/triângulo-equilátero-nodes.png" alt="Triângulo equilátero com nodes nos vértices" style="width: 100%; max-width: 170px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-Veja que desenhamos o segmento de reta que conecta $P_i$ com $P_{i+1}$ e posicionamos o número do vértice próximo de $P_i$. Nesse processo adicionamos um pequeno valor ao raio para que o número do vértice não fique no mesmo lugar de $P_i$.
+<p>Veja que desenhamos o segmento de reta que conecta $P_i$ com $P_{i+1}$ e posicionamos o número do vértice próximo de $P_i$. Nesse processo adicionamos um pequeno valor ao raio para que o número do vértice não fique no mesmo lugar de $P_i$.</p>
 
-Temos o que é necessário para transformar o código acima em um comando de desenho. A ideia é deixar o valor $n$ e o raio $r$ parametrizados. Vamos criar um comando que aceita dois parâmetros. Para isso, crie um novo arquivo dentro do projeto chamado <b>polígono-regular.tex</b> com a seguinte estrutura base:
+<p>Temos o que é necessário para transformar o código acima em um comando de desenho. A ideia é deixar o valor $n$ e o raio $r$ parametrizados. Vamos criar um comando que aceita dois parâmetros. Para isso, crie um novo arquivo dentro do projeto chamado <b>polígono-regular.tex</b> com a seguinte estrutura base:</p>
 
 <pre>
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     % conteúdo do comando
 }</code></pre>
 
-Um comando com dois parâmetros em $\LaTeX$ é criado com o macro <b>\newcommand{\nomeComando}[número de parâmetros]{}</b>. Vamos copiar o código feito até aqui que desenha o polígono regular e fazer algumas alterações: vamos substituir onde estava $n$ e $r$ por <b>#1</b> e <b>#2</b>, respectivamente:
+<p>Um comando com dois parâmetros em $\LaTeX$ é criado com o macro <b>\newcommand{\nomeComando}[número de parâmetros]{}</b>. Vamos copiar o código feito até aqui que desenha o polígono regular e fazer algumas alterações: vamos substituir onde estava $n$ e $r$ por <b>#1</b> e <b>#2</b>, respectivamente:</p>
 
 <pre>
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
@@ -205,7 +205,7 @@ Um comando com dois parâmetros em $\LaTeX$ é criado com o macro <b>\newcommand
     \end{tikzpicture}
 }</code></pre>
 
-Com o código acima em um arquivo separado, podemos deixar apenas a invocação do comando no arquivo principal:
+<p>Com o código acima em um arquivo separado, podemos deixar apenas a invocação do comando no arquivo principal:</p>
 
 <pre>
 <code class="language-latex">\documentclass{standalone}
@@ -236,7 +236,8 @@ Com o código acima em um arquivo separado, podemos deixar apenas a invocação 
         \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
 
-        % criando um escopo que rotaciona a base xy cartesiana em 90-\a graus no sentido anti-horário
+        % criando um escopo que rotaciona a base xy cartesiana em 
+        % 90-\a graus no sentido anti-horário
         \begin{scope}[rotate=90-\a]
             \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
             {
@@ -251,3 +252,5 @@ Com o código acima em um arquivo separado, podemos deixar apenas a invocação 
 
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-rotacionados.png" alt="Polígonos regulares rotacionados - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-rotacionados.png" alt="Polígonos regulares rotacionados - pentágono e hexágono com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
+
+<p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e tentar reproduzir a primeira imagem deste guia. O que ela tem a mais é a adição de uma circonferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node).</p>
