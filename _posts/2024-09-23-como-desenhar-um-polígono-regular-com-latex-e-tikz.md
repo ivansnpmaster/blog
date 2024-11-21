@@ -253,4 +253,32 @@ $$
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-rotacionados.png" alt="Polígonos regulares rotacionados - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-rotacionados.png" alt="Polígonos regulares rotacionados - pentágono e hexágono com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
-<p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e tentar reproduzir a primeira imagem deste guia. O que ela tem a mais é a adição de uma circonferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node).</p>
+<p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e tentar reproduzir a primeira imagem deste guia. O que ela tem a mais é a adição de uma circunferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node). Primeiro, precisamos desenhar uma circunferência de raio $r$:</p>
+
+<pre><code class="language-latex">\draw[red] (0,0) circle (\r);</code></pre>
+
+<p>Acima, desenhamos uma circunferência de raio $r$ centrada na origem. Podemos adicionar o trecho acima no comando antes da parte que desenha os lados do polígono:</p>
+
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{#1} % lados do polígono
+        \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita à base
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        % circunferência circunscrita
+        \draw[red] (0,0) circle (\r);
+
+        % criando um escopo que rotaciona a base xy cartesiana em 
+        % 90-\a graus no sentido anti-horário
+        \begin{scope}[rotate=90-\a]
+            \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
+            {
+                % conectando P_i com P_{i+1}
+                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+            }
+        \end{scope}
+
+    \end{tikzpicture}
+}</code></pre>
