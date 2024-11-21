@@ -176,7 +176,7 @@ $$
 
 <p>Que gera o seguinte resultado:</p>
 
-<img src="/blog/assets/img/2024/09/23/triângulo-equilátero-nodes.png" alt="Triângulo equilátero com nodes nos vértices" style="width: 100%; max-width: 170px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+<img src="/blog/assets/img/2024/09/23/triângulo-equilátero-nodes.png" alt="Triângulo equilátero com nodes nos vértices" style="width: 100%; max-width: 175px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
 <p>Veja que desenhamos o segmento de reta que conecta $P_i$ com $P_{i+1}$ e posicionamos o número do vértice próximo de $P_i$. Nesse processo adicionamos um pequeno valor ao raio para que o número do vértice não fique no mesmo lugar de $P_i$.</p>
 
@@ -285,4 +285,33 @@ $$
 
 <p>Além da circunferência, veja que também colocamos a opção <b>ultra thick</b> nos lados do polígono para deixar seus segmentos mais grossos. Com isso, temos o seguinte resultado para $n=3$:</p>
 
-<img src="/blog/assets/img/2024/09/23/polígono-regular-n3-circunferência.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita" style="width: 100%; max-width: 170px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+<img src="/blog/assets/img/2024/09/23/polígono-regular-n3-circunferência.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+
+<p>Agora, podemos conectar o vértice $P_i$ com a origem $(0,\,0)$ com um segmento de reta tracejado e bem fino dentro do foreach:</p>
+
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{#1} % lados do polígono
+        \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita à base
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        % circunferência circunscrita
+        \draw[red] (0,0) circle (\r);
+
+        % criando um escopo que rotaciona a base xy cartesiana em 
+        % 90-\a graus no sentido anti-horário
+        \begin{scope}[rotate=90-\a]
+            \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
+            {
+                % conectando P_i com P_{i+1}
+                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+
+                % conectando P_i com a origem
+                \draw[dashed, ultra thin] ({\i*\a}:\r) -- (0,0);
+            }
+        \end{scope}
+
+    \end{tikzpicture}
+}</code></pre>
