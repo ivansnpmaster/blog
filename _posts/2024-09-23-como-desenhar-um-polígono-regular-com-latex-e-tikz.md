@@ -319,3 +319,38 @@ $$
 <p>Que produz a seguinte figura:</p>
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-conexão-origem.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+
+<p>Para desenhar o node com o texto $r$, fiz da seguinte forma: dentro de um <b>scope</b> rotacionado em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$:</p>
+
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{#1} % lados do polígono
+        \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita à base
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        % circunferência circunscrita
+        \draw[red] (0,0) circle (\r);
+
+        % criando um escopo que rotaciona a base xy cartesiana em 
+        % 90-\a graus no sentido anti-horário
+        \begin{scope}[rotate=90-\a]
+            \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
+            {
+                % conectando P_i com P_{i+1}
+                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+
+                % conectando P_i com a origem
+                \draw[dashed, ultra thin] ({\i*\a}:\r) -- (0,0);
+
+                % desenhar o texto $r$ posicionado
+                % na metade do valor de \r
+                \begin{scope}[rotate=10]
+                    \node[red] at ({\i*\a}:\r*0.5) {$r$};
+                \end{scope}
+            }
+        \end{scope}
+
+    \end{tikzpicture}
+}</code></pre>
