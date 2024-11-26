@@ -261,8 +261,8 @@ $$
 
 <p>Acima, desenhamos uma circunferência vermelha de raio $r$ centrada na origem. Podemos adicionar o trecho acima no comando antes da parte que desenha os lados do polígono:</p>
 
-```TeX
-\newcommand{\desenharPoligonoRegular}[2]{
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -283,10 +283,9 @@ $$
         \end{scope}
 
     \end{tikzpicture}
-}
-```
+}</code></pre>
 
-<p>Além da circunferência, veja que também colocamos a opção `ultra thick` nos lados do polígono para deixar seus segmentos mais grossos. Com isso, temos o seguinte resultado para $n=3$:</p>
+<p>Além da circunferência, veja que também colocamos a opção <b>ultra thick</b> nos lados do polígono para deixar seus segmentos mais grossos. Com isso, temos o seguinte resultado para $n=3$:</p>
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-circunferência.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
@@ -323,9 +322,10 @@ $$
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-conexão-origem.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-<p>Para desenhar o texto $r$ em vermelho, fiz o seguinte: dentro de um `scope` rotacionando a base cartesiana em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$ e mesmo ângulo $\alpha$:</p>
+<p>Para desenhar o texto $r$ em vermelho, fiz o seguinte: dentro de um <b>scope</b> rotacionando a base cartesiana em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$ e mesmo ângulo $\alpha$:</p>
 
-<pre><code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
