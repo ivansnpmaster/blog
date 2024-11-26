@@ -348,11 +348,10 @@ $$
 
                 % desenhar o texto $r$ posicionado
                 % na metade do valor de \r
-                <span style="background-color: yellow;">
-                \begin{scope}[rotate=10]
+                
+                <span style="background-color: yellow;">\begin{scope}[rotate=10]</span>
                     \node[red] at ({\i*\a}:\r*0.5) {$r$};
                 \end{scope}
-                </span>
             }
         \end{scope}
 
