@@ -256,7 +256,7 @@ $$
 <p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e adicionar mais elementos na figura. O que ela tem a mais é a adição de uma circunferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node). Primeiro, precisamos desenhar uma circunferência de raio $r$:</p>
 
 ```TeX
-\draw[red] (0,0) circle (\r);</code></pre>
+\draw[red] (0,0) circle (\r);
 ```
 
 <p>Acima, desenhamos uma circunferência vermelha de raio $r$ centrada na origem. Podemos adicionar o trecho acima no comando antes da parte que desenha os lados do polígono:</p>
