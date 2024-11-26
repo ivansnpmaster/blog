@@ -270,7 +270,7 @@ $$
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
 
         % circunferência circunscrita
-        <span style="background-color: yellow;">\draw[red] (0,0) circle (\r);
+        <span style="background-color: yellow;">\draw[red] (0,0) circle (\r);</span>
 
         % criando um escopo que rotaciona a base xy cartesiana em 
         % 90-\a graus no sentido anti-horário
