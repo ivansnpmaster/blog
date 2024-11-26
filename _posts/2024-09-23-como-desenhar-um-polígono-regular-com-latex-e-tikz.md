@@ -363,7 +363,7 @@ $$
 
 <script src="https://gist.github.com/ivansnpmaster/e891a9293d3f0fed82d51aa653ce4d89.js"></script>
 
-```tex
+```TeX
 \newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
