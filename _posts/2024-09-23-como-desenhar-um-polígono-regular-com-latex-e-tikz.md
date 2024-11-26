@@ -8,7 +8,12 @@ publicado: false
 <link rel="stylesheet" href="/blog/assets/js/highlight-code/theme.css">
 <script src="/blog/assets/js/highlight-code/index.js"></script>
 <script src="/blog/assets/js/highlight-code/latex.js"></script>
-<script>hljs.highlightAll();</script>
+<script>
+    hljs.configure({
+        ignoreUnescapedHTML: true
+    });
+    hljs.highlightAll();
+</script>
 
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
