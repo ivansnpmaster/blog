@@ -362,9 +362,8 @@ $$
 
 <script src="https://gist.github.com/ivansnpmaster/e891a9293d3f0fed82d51aa653ce4d89.js"></script>
 
-{% highlight python linenos hl_lines="2 3" %}
-def hello():
-    print("Hello, World!")  # Highlighted line
-    print("Welcome!")       # Highlighted line
-    print("Goodbye!")
+{% highlight ruby mark_lines="1 2" %}
+def foo
+  puts 'foo'
+end
 {% endhighlight %}
