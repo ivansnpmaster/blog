@@ -329,8 +329,8 @@ $$
 
 <p>Para desenhar o texto $r$ em vermelho, fiz o seguinte: dentro de um <b>scope</b> rotacionando a base cartesiana em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$ e mesmo ângulo $\alpha$:</p>
 
-```TeX
-\newcommand{\desenharPoligonoRegular}[2]{
+<pre>
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -354,15 +354,14 @@ $$
                 % desenhar o texto $r$ posicionado
                 % na metade do valor de \r
                 
-                <span class="highlight">\begin{scope}[rotate=10]</span>
-                    <span class="highlight">\node[red] at ({\i*\a}:\r*0.5) {$r$};</span>
-                <span class="highlight">\end{scope}</span>
+                <div class="highlight">\begin{scope}[rotate=10]</div>
+                    <div class="highlight">\node[red] at ({\i*\a}:\r*0.5) {$r$};</div>
+                <div class="highlight">\end{scope}</div>
             }
         \end{scope}
 
     \end{tikzpicture}
-}
-```
+}</code></pre>
 
 <p>Que produz a figura a seguir:</p>
 
