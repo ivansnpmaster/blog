@@ -273,7 +273,7 @@ $$
             \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
             {
                 % conectando P_i com P_{i+1}
-                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+                \draw<span style="background-color: yellow;">[ultra thick]</span> ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
             }
         \end{scope}
 
