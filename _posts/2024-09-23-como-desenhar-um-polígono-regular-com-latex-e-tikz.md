@@ -5,6 +5,11 @@ categories: matemática computação latex tikz
 publicado: false
 ---
 
+<link rel="stylesheet" href="/blog/assets/js/highlight-code/theme.css">
+<script src="/blog/assets/js/highlight-code/index.js"></script>
+<script src="/blog/assets/js/highlight-code/latex.js"></script>
+<script>hljs.highlightAll();</script>
+
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
 > Todo polígono regular está inscrito (dentro) em uma circunferência.
@@ -320,8 +325,7 @@ $$
 
 <p>Para desenhar o texto $r$ em vermelho, fiz o seguinte: dentro de um `scope` rotacionando a base cartesiana em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$ e mesmo ângulo $\alpha$:</p>
 
-```TeX
-\newcommand{\desenharPoligonoRegular}[2]{
+<pre><code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -344,15 +348,16 @@ $$
 
                 % desenhar o texto $r$ posicionado
                 % na metade do valor de \r
+                <span style="background-color: yellow;">
                 \begin{scope}[rotate=10]
                     \node[red] at ({\i*\a}:\r*0.5) {$r$};
                 \end{scope}
+                </span>
             }
         \end{scope}
 
     \end{tikzpicture}
-}
-```
+}</code></pre>
 
 <p>Que produz a figura a seguir:</p>
 
@@ -361,9 +366,3 @@ $$
 <p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar</p>
 
 <script src="https://gist.github.com/ivansnpmaster/e891a9293d3f0fed82d51aa653ce4d89.js"></script>
-
-{% highlight ruby mark_lines="1 2" %}
-def foo
-  puts <span style="background-color: yellow;">'foo'</span>
-end
-{% endhighlight %}
