@@ -265,7 +265,7 @@ $$
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
 
         % circunferência circunscrita
-        <span style="background-color: yellow;">\draw[red] (0,0) circle (\r);</span>
+        <span style="background-color: yellow;">\draw[red] (0,0) circle (\r);
 
         % criando um escopo que rotaciona a base xy cartesiana em 
         % 90-\a graus no sentido anti-horário
@@ -361,3 +361,10 @@ $$
 <p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar</p>
 
 <script src="https://gist.github.com/ivansnpmaster/e891a9293d3f0fed82d51aa653ce4d89.js"></script>
+
+{% highlight python linenos hl_lines="2 3" %}
+def hello():
+    print("Hello, World!")  # Highlighted line
+    print("Welcome!")       # Highlighted line
+    print("Goodbye!")
+{% endhighlight %}
