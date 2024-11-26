@@ -358,3 +358,5 @@ $$
 <p>Que produz a figura a seguir:</p>
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-raios.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem e com label r representando o raio" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+
+<p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar</p>
