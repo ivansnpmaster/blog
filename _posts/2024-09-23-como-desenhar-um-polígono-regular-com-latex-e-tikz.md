@@ -364,6 +364,6 @@ $$
 
 {% highlight ruby mark_lines="1 2" %}
 def foo
-  puts 'foo'
+  puts <span style="background-color: yellow;">'foo'</span>
 end
 {% endhighlight %}
