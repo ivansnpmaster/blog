@@ -5,6 +5,11 @@ categories: matemática computação latex tikz
 publicado: false
 ---
 
+<link rel="stylesheet" href="/blog/assets/js/highlight-code/theme.css">
+<script src="/blog/assets/js/highlight-code/index.js"></script>
+<script src="/blog/assets/js/highlight-code/latex.js"></script>
+<script>hljs.highlightAll();</script>
+
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
 > Todo polígono regular está inscrito (dentro) em uma circunferência.
@@ -250,7 +255,9 @@ $$
 
 <p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e adicionar mais elementos na figura. O que ela tem a mais é a adição de uma circunferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node). Primeiro, precisamos desenhar uma circunferência de raio $r$:</p>
 
-<pre><code class="language-latex">\draw[red] (0,0) circle (\r);</code></pre>
+```TeX
+\draw[red] (0,0) circle (\r);</code></pre>
+```
 
 <p>Acima, desenhamos uma circunferência vermelha de raio $r$ centrada na origem. Podemos adicionar o trecho acima no comando antes da parte que desenha os lados do polígono:</p>
 
@@ -317,47 +324,6 @@ $$
 
 <p>Para desenhar o texto $r$ em vermelho, fiz o seguinte: dentro de um `scope` rotacionando a base cartesiana em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$ e mesmo ângulo $\alpha$:</p>
 
-<pre>
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
-    \begin{tikzpicture}
-
-        \pgfmathsetmacro{\n}{#1} % lados do polígono
-        \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita à base
-        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
-
-        % circunferência circunscrita
-        \draw[red] (0,0) circle (\r);
-
-        % criando um escopo que rotaciona a base xy cartesiana em 
-        % 90-\a graus no sentido anti-horário
-        \begin{scope}[rotate=90-\a]
-            \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
-            {
-                % conectando P_i com P_{i+1}
-                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
-
-                % conectando P_i com a origem
-                \draw[dashed, ultra thin] ({\i*\a}:\r) -- (0,0);
-
-                % desenhar o texto $r$ posicionado
-                % na metade do valor de \r
-                \begin{scope}[rotate=10]
-                    \node[red] at ({\i*\a}:\r*0.5) {$r$};
-                \end{scope}
-            }
-        \end{scope}
-
-    \end{tikzpicture}
-}</code></pre>
-
-<p>Que produz a figura a seguir:</p>
-
-<img src="/blog/assets/img/2024/09/23/polígono-regular-n3-raios.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem e com label r representando o raio" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
-
-<p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar</p>
-
-<script src="https://gist.github.com/ivansnpmaster/e891a9293d3f0fed82d51aa653ce4d89.js"></script>
-
 ```TeX
 \newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
@@ -391,3 +357,11 @@ $$
     \end{tikzpicture}
 }
 ```
+
+<p>Que produz a figura a seguir:</p>
+
+<img src="/blog/assets/img/2024/09/23/polígono-regular-n3-raios.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem e com label r representando o raio" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+
+<p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar</p>
+
+<script src="https://gist.github.com/ivansnpmaster/e891a9293d3f0fed82d51aa653ce4d89.js"></script>
