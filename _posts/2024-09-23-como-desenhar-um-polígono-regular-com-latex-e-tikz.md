@@ -256,8 +256,8 @@ $$
 
 <p>Acima, desenhamos uma circunferência vermelha de raio $r$ centrada na origem. Podemos adicionar o trecho acima no comando antes da parte que desenha os lados do polígono:</p>
 
-<pre>
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+```TeX
+\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -278,7 +278,8 @@ $$
         \end{scope}
 
     \end{tikzpicture}
-}</code></pre>
+}
+```
 
 <p>Além da circunferência, veja que também colocamos a opção `ultra thick` nos lados do polígono para deixar seus segmentos mais grossos. Com isso, temos o seguinte resultado para $n=3$:</p>
 
