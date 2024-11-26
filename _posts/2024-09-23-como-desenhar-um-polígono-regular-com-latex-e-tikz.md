@@ -270,7 +270,7 @@ $$
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
 
         % circunferência circunscrita
-        <span style="background-color: yellow;">\draw[red] (0,0) circle (\r);</span>
+        <span class="highlight">\draw[red] (0,0) circle (\r);</span>
 
         % criando um escopo que rotaciona a base xy cartesiana em 
         % 90-\a graus no sentido anti-horário
@@ -278,7 +278,7 @@ $$
             \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
             {
                 % conectando P_i com P_{i+1}
-                \draw<span style="background-color: yellow;">[ultra thick]</span> ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+                \draw<span class="highlight">[ultra thick]</span> ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
             }
         \end{scope}
 
@@ -349,9 +349,9 @@ $$
                 % desenhar o texto $r$ posicionado
                 % na metade do valor de \r
                 
-                <span style="background-color: yellow;">\begin{scope}[rotate=10]</span>
-                    \node[red] at ({\i*\a}:\r*0.5) {$r$};
-                \end{scope}
+                <span class="highlight">\begin{scope}[rotate=10]</span>
+                    <span class="highlight">\node[red] at ({\i*\a}:\r*0.5) {$r$};</span>
+                <span class="highlight">\end{scope}</span>
             }
         \end{scope}
 
