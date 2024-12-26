@@ -5,21 +5,8 @@ categories: matemática computação latex tikz
 publicado: false
 ---
 
-<link rel="stylesheet" href="/blog/assets/js/highlight-code/theme.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-<script src="/blog/assets/js/highlight-code/latex.js"></script>
-<script>
-    hljs.configure({
-        ignoreUnescapedHTML: true
-    });
-    hljs.highlightAll();
-</script>
-
-<style>
-    .hljs-callout{font-weight:bold;font-style:italic;color:#06f}
-    .hljs-callout *, .hljs-callout span, etc
-    {font-weight:bold;font-style:italic;background:gold;}
-</style>
+<link rel="stylesheet" href="/blog/assets/css/prism-latex.css">
+<script src="/blog/assets/js/prism-latex.js"></script>
 
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
@@ -360,7 +347,7 @@ $$
                 % desenhar o texto $r$ posicionado
                 % na metade do valor de \r
                 
-                <span class="hljs-callout">\begin{scope}[rotate=10]</span>
+                \begin{scope}[rotate=10]
                     \node[red] at ({\i*\a}:\r*0.5) {$r$};
                 \end{scope}
             }
