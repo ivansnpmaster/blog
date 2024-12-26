@@ -6,10 +6,13 @@ publicado: false
 ---
 
 <link rel="stylesheet" href="/blog/assets/js/highlight-code/theme.css">
-<script src="/blog/assets/js/highlight-code/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 <script src="/blog/assets/js/highlight-code/latex.js"></script>
 <script>
-    hljs.initHighlightingOnLoad();
+    hljs.configure({
+        ignoreUnescapedHTML: true
+    });
+    hljs.highlightAll();
 </script>
 
 <style>
