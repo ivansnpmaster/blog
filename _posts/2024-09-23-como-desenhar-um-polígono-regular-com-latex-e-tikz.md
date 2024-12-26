@@ -9,48 +9,14 @@ publicado: false
 <script src="/blog/assets/js/highlight-code/index.js"></script>
 <script src="/blog/assets/js/highlight-code/latex.js"></script>
 <script>
-    hljs.highlightAll();
+    hljs.initHighlightingOnLoad();
 </script>
 
 <style>
-    pre[data-line] {
-        position: relative;
-    }
-
-    pre[data-line] code {
-        counter-reset: line;
-    }
-
-    pre[data-line] code > div {
-        position: relative;
-        display: block;
-    }
-
-    pre[data-line] code > div[data-highlight="true"] {
-        background-color: yellow;
-        border-left: 3px solid orange;
-        padding-left: 5px;
-    }
+    .hljs-callout{font-weight:bold;font-style:italic;color:#06f}
+    .hljs-callout *, .hljs-callout span, etc
+    {font-weight:bold;font-style:italic;background:gold;}
 </style>
-
-<script>
-    document.querySelectorAll('pre[data-line]').forEach((block) => {
-        const linesToHighlight = block.getAttribute('data-line').split(',').flatMap(range => {
-            if (range.includes('-')) {
-                const [start, end] = range.split('-').map(Number);
-                return Array.from({ length: end - start + 1 }, (_, i) => start + i);
-            }
-            return [Number(range)];
-        });
-
-        const codeLines = block.querySelectorAll('code > div');
-        linesToHighlight.forEach((lineNumber) => {
-            if (codeLines[lineNumber - 1]) {
-                codeLines[lineNumber - 1].setAttribute('data-highlight', 'true');
-            }
-        });
-    });
-</script>
 
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
@@ -391,7 +357,7 @@ $$
                 % desenhar o texto $r$ posicionado
                 % na metade do valor de \r
                 
-                \begin{scope}[rotate=10]
+                <span class="hljs-callout">\begin{scope}[rotate=10]</span>
                     \node[red] at ({\i*\a}:\r*0.5) {$r$};
                 \end{scope}
             }
