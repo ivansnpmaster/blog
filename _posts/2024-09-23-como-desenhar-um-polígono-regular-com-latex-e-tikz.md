@@ -9,11 +9,16 @@ publicado: false
 <script src="/blog/assets/js/highlight-code/index.js"></script>
 <script src="/blog/assets/js/highlight-code/latex.js"></script>
 <script>
-    hljs.configure({
-        ignoreUnescapedHTML: true
-    });
     hljs.highlightAll();
 </script>
+
+<style>
+    .highlight {
+        background-color: yellow;
+        border-radius: 3px;
+        padding: 2px;
+    }
+</style>
 
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
@@ -354,9 +359,9 @@ $$
                 % desenhar o texto $r$ posicionado
                 % na metade do valor de \r
                 
-                <div class="highlight">\begin{scope}[rotate=10]</div>
-                    <div class="highlight">\node[red] at ({\i*\a}:\r*0.5) {$r$};</div>
-                <div class="highlight">\end{scope}</div>
+                <span class="highlight">\begin{scope}[rotate=10]</span>
+                    <span class="highlight">\node[red] at ({\i*\a}:\r*0.5) {$r$};</span>
+                <span class="highlight">\end{scope}</span>
             }
         \end{scope}
 
