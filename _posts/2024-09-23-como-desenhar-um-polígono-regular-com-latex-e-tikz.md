@@ -13,12 +13,44 @@ publicado: false
 </script>
 
 <style>
-    .highlight {
+    pre[data-line] {
+        position: relative;
+    }
+
+    pre[data-line] code {
+        counter-reset: line;
+    }
+
+    pre[data-line] code > div {
+        position: relative;
+        display: block;
+    }
+
+    pre[data-line] code > div[data-highlight="true"] {
         background-color: yellow;
-        border-radius: 3px;
-        padding: 2px;
+        border-left: 3px solid orange;
+        padding-left: 5px;
     }
 </style>
+
+<script>
+    document.querySelectorAll('pre[data-line]').forEach((block) => {
+        const linesToHighlight = block.getAttribute('data-line').split(',').flatMap(range => {
+            if (range.includes('-')) {
+                const [start, end] = range.split('-').map(Number);
+                return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+            }
+            return [Number(range)];
+        });
+
+        const codeLines = block.querySelectorAll('code > div');
+        linesToHighlight.forEach((lineNumber) => {
+            if (codeLines[lineNumber - 1]) {
+                codeLines[lineNumber - 1].setAttribute('data-highlight', 'true');
+            }
+        });
+    });
+</script>
 
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
