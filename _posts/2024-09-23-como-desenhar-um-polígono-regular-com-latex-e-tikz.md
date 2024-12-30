@@ -23,7 +23,7 @@ publicado: false
 
 <p>Após criar o projeto, podemos estruturar um documento mínimo para criação da nossa figura de interesse:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\documentclass{standalone}
 
 % pacote 'tikz' para criar desenhos
@@ -107,7 +107,7 @@ $$
 
 <p>Vamos realizar a conexão dos pontos com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b><a href="https://tikz.dev/pgffor" target="_blank">foreach</a></b> (para cada). Mas antes de montá-lo, é interessante sabermos como criar variáveis dentro do ambiente <b>tikzpicture</b>:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
@@ -126,7 +126,7 @@ $$
 
 <p>Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. Fique à vontade para mudar o valor de $n$ e ver como ele impacta na construção da figura.</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
@@ -152,7 +152,7 @@ $$
 
 <p>Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b> para cada segmento:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
@@ -187,7 +187,7 @@ $$
 
 <p>Um comando com dois parâmetros em $\LaTeX$ é criado com o macro <b>\newcommand{\nomeComando}[número de parâmetros]{}</b>. Vamos copiar o código feito até aqui que desenha o polígono regular e fazer algumas alterações: vamos substituir onde estava $n$ e $r$ por <b>#1</b> e <b>#2</b>, respectivamente:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -205,7 +205,7 @@ $$
 
 <p>Com o código acima em um arquivo separado, podemos deixar apenas a invocação do comando no arquivo principal:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
@@ -226,7 +226,7 @@ $$
 
 <p>Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$, isto é, em $90^\circ-\alpha$:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -259,7 +259,7 @@ $$
 
 <p>Acima, desenhamos uma circunferência vermelha de raio $r$ centrada na origem. Podemos adicionar o trecho acima no comando antes da parte que desenha os lados do polígono:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -289,7 +289,7 @@ $$
 
 <p>Agora, podemos conectar o vértice $P_i$ com a origem $(0,\,0)$ com um segmento de reta tracejado e bem fino dentro do foreach:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -360,5 +360,3 @@ $$
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-raios.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem e com label r representando o raio" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
 <p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar</p>
-
-<script src="https://gist.github.com/ivansnpmaster/e891a9293d3f0fed82d51aa653ce4d89.js"></script>
