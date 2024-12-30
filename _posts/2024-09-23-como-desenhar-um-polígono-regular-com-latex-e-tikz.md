@@ -270,13 +270,13 @@ $$
             \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
             {
                 % conectando P_i com P_{i+1}
-                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+                \draw[thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
             }
         \end{scope}
     \end{tikzpicture}
 }</code></pre>
 
-<p>Além da circunferência, veja que também colocamos a opção <b>ultra thick</b> nos lados do polígono para deixar seus segmentos mais grossos. Com isso, temos o seguinte resultado para $n=3$:</p>
+<p>Além da circunferência, veja que também colocamos a opção <b>thick</b> nos lados do polígono para deixar seus segmentos mais grossos. Com isso, temos o seguinte resultado para $n=3$:</p>
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-circunferência.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
@@ -299,7 +299,7 @@ $$
             \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
             {
                 % conectando P_i com P_{i+1}
-                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+                \draw[thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
 
                 % conectando P_i com a origem
                 \draw[dashed, ultra thin] ({\i*\a}:\r) -- (0,0);
@@ -331,7 +331,7 @@ $$
             \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
             {
                 % conectando P_i com P_{i+1}
-                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+                \draw[thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
 
                 % conectando P_i com a origem
                 \draw[dashed, ultra thin] ({\i*\a}:\r) -- (0,0);
@@ -350,4 +350,48 @@ $$
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-raios.png" alt="Triângulo equilátero com nodes nos vértices e uma circunferência circunscrita - conexão dos vértices com a origem e com label r representando o raio" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-<p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar</p>
+<p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar o trecho de código de modo que a cor de fundo seja desenhada primeiro, antes dos outros elementos:</p>
+
+<pre class="line-numbers" data-line="16-19">
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]%
+{
+    \begin{tikzpicture}
+
+        \pgfmathsetmacro{\n}{#1} % lados do polígono
+        \pgfmathsetmacro{\r}{#2} % raio da circunferência circunscrita à base
+        \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
+
+        % circunferência circunscrita
+        \draw[red] (0,0) circle (\r);
+
+        % criando um escopo que rotaciona a base xy cartesiana em 
+        % 90-\a graus no sentido anti-horário
+        \begin{scope}[rotate=90-\a]
+
+            \fill[gray!30] (\a:\r) foreach \i in {2,3,...,\n}
+            {
+                --  ({\i*\a}:\r)
+            } -- cycle;
+        
+            \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
+            {
+                % conectando P_i com P_{i+1}
+                \draw[thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+
+                % conectando P_i com a origem
+                \draw[dashed, ultra thin] ({\i*\a}:\r) -- (0,0);
+
+                % desenhar o texto $r$ posicionado
+                % na metade do valor de \r
+                \begin{scope}[rotate=10]
+                    \node[red] at ({\i*\a}:\r*0.5) {$r$};
+                \end{scope}
+            }
+        \end{scope}
+    \end{tikzpicture}
+}</code></pre>
+
+Acima, veja que usamos primeiro o comando <b>\fill[gray!30]</b> seguido do primeiro vértice <b>(\a:\r)</b> que define a região da cor de fundo. Especificamos a cor de fundo sendo um cinza $30\%$. Em seguida usamos o comando <b>foreach</b>, de forma a ter dentro dele as coordenadas que definem os vértices do polígono que será preenchido (de forma iterativa). Logo após o <b>foreach</b>, colocamos <b>-- cycle</b> para fechar o polígono da cor de fundo, conectando o último vértice da iteração com o primeiro <b>(\a:\r)</b>.
+
+O código acima produz a seguinte figura:
+
