@@ -180,7 +180,7 @@ $$
 
 <p>Temos o que é necessário para transformar o código acima em um comando de desenho. A ideia é deixar o valor $n$ e o raio $r$ parametrizados. Vamos criar um comando que aceita dois parâmetros. Para isso, crie um novo arquivo dentro do projeto chamado <b>polígono-regular.tex</b> com a seguinte estrutura base:</p>
 
-<pre>
+<pre class="line-numbers">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     % conteúdo do comando
 }</code></pre>
@@ -226,7 +226,7 @@ $$
 
 <p>Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$, isto é, em $90^\circ-\alpha$:</p>
 
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="8-10,16">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -251,15 +251,9 @@ $$
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-rotacionados.png" alt="Polígonos regulares rotacionados - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-rotacionados.png" alt="Polígonos regulares rotacionados - pentágono e hexágono com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
-<p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e adicionar mais elementos na figura. O que ela tem a mais é a adição de uma circunferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node). Primeiro, precisamos desenhar uma circunferência de raio $r$:</p>
+<p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e adicionar mais elementos na figura. O que ela tem a mais é a adição de uma circunferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node). Primeiro, precisamos desenhar uma circunferência de raio antes do trecho de código que desenha os lados do polígono:</p>
 
-```TeX
-\draw[red] (0,0) circle (\r);
-```
-
-<p>Acima, desenhamos uma circunferência vermelha de raio $r$ centrada na origem. Podemos adicionar o trecho acima no comando antes da parte que desenha os lados do polígono:</p>
-
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="8-9">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -268,7 +262,7 @@ $$
         \pgfmathsetmacro{\a}{360/\n} % ângulo central a partir de '\n'
 
         % circunferência circunscrita
-        <span class="highlight">\draw[red] (0,0) circle (\r);</span>
+        \draw[red] (0,0) circle (\r);
 
         % criando um escopo que rotaciona a base xy cartesiana em 
         % 90-\a graus no sentido anti-horário
@@ -279,7 +273,6 @@ $$
                 \draw<span class="highlight">[ultra thick]</span> ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
             }
         \end{scope}
-
     \end{tikzpicture}
 }</code></pre>
 
@@ -289,7 +282,7 @@ $$
 
 <p>Agora, podemos conectar o vértice $P_i$ com a origem $(0,\,0)$ com um segmento de reta tracejado e bem fino dentro do foreach:</p>
 
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="19-20">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -312,7 +305,6 @@ $$
                 \draw[dashed, ultra thin] ({\i*\a}:\r) -- (0,0);
             }
         \end{scope}
-
     \end{tikzpicture}
 }</code></pre>
 
@@ -351,7 +343,6 @@ $$
                 \end{scope}
             }
         \end{scope}
-
     \end{tikzpicture}
 }</code></pre>
 
