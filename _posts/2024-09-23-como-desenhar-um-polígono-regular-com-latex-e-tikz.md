@@ -107,7 +107,7 @@ $$
 
 <p>Vamos realizar a conexão dos pontos com um segmento de reta através de alguma estrutura iterativa. A estrutura iterativa que vamos utilizar é uma bem conhecida em qualquer linguagem de programação: o <b><a href="https://tikz.dev/pgffor" target="_blank">foreach</a></b> (para cada). Mas antes de montá-lo, é interessante sabermos como criar variáveis dentro do ambiente <b>tikzpicture</b>:</p>
 
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="8-10">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
@@ -126,7 +126,7 @@ $$
 
 <p>Com isso, ao utilizar o foreach já conseguimos desenhar um polígono regular. Fique à vontade para mudar o valor de $n$ e ver como ele impacta na construção da figura.</p>
 
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="12-16">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
@@ -152,7 +152,7 @@ $$
 
 <p>Podemos numerar cada vértice do polígono gerado. Basta adicionar um <b>node</b> para cada segmento:</p>
 
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="15">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
@@ -187,7 +187,7 @@ $$
 
 <p>Um comando com dois parâmetros em $\LaTeX$ é criado com o macro <b>\newcommand{\nomeComando}[número de parâmetros]{}</b>. Vamos copiar o código feito até aqui que desenha o polígono regular e fazer algumas alterações: vamos substituir onde estava $n$ e $r$ por <b>#1</b> e <b>#2</b>, respectivamente:</p>
 
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="2-13">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -205,7 +205,7 @@ $$
 
 <p>Com o código acima em um arquivo separado, podemos deixar apenas a invocação do comando no arquivo principal:</p>
 
-<pre class="line-numbers">
+<pre class="line-numbers" data-line="4-5,8-9">
 <code class="language-latex">\documentclass{standalone}
 
 \usepackage{tikz}
