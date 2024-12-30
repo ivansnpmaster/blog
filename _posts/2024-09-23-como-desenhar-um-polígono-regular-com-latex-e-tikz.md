@@ -253,7 +253,7 @@ $$
 
 <p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e adicionar mais elementos na figura. O que ela tem a mais é a adição de uma circunferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node). Primeiro, precisamos desenhar uma circunferência de raio antes do trecho de código que desenha os lados do polígono:</p>
 
-<pre class="line-numbers" data-line="8-9">
+<pre class="line-numbers" data-line="8-9,17">
 <code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
     \begin{tikzpicture}
 
@@ -270,7 +270,7 @@ $$
             \foreach \i in {1,...,\n} % lista que vai de 1 até '\n'
             {
                 % conectando P_i com P_{i+1}
-                \draw<span class="highlight">[ultra thick]</span> ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
+                \draw[ultra thick] ({\i*\a}:\r) -- ({(\i+1)*\a}:\r) node at ({\i*\a}:{\r+0.3}) {\i};
             }
         \end{scope}
     \end{tikzpicture}
