@@ -39,7 +39,7 @@ publicado: false
 
 <p>Pensando nas formas de escrita de um ponto disponíveis no pacote <b>tikz</b>, vale mais a pena trabalharmos na representação polar. Na representação polar de um ponto, precisamos de apenas duas informações: o raio $r$ da circunferência e do ângulo $\beta$ em relação ao eixo $x$. Veja a ilustração de um ponto $P=(r,\,\beta)$ qualquer:</p>
 
-<img src="/blog/assets/img/2024/09/23/ponto_na_circunferencia.png" alt="Dois pontos A e B em uma circunferência de raio r" style="width: 100%; max-width: 150px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
+<img src="/blog/assets/img/2024/09/23/ponto_na_circunferencia.png" alt="Dois pontos A e B em uma circunferência de raio r" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
 <p>Como todos os vértices do polígono regular sempre estão $r$ unidades da origem, basta encontrarmos o valor do ângulo de cada vértice. Para sabermos o valor do ângulo de cada vértice do polígono regular, precisamos calcular o valor do ângulo central $\alpha$ da circunferência em função do número de lados $n$ do polígono. Isto é, é direto que $\alpha=\frac{360^\circ}{n}$. Note que múltiplos de $\alpha$ estão igualmente espaçados ao longo de toda a circunferência.</p>
 
