@@ -10,7 +10,7 @@ publicado: false
 
 <p>Um polígono regular é um polígono que possui $n$ (com $n\geq3$) lados com mesmo comprimento e também ângulos internos iguais (congruentes). Para conseguirmos desenhar um polígono regular, precisamos lembrar de uma informação importante:</p>
 
-> Todo polígono regular está inscrito (dentro) em uma circunferência.
+> 📝 Todo polígono regular está inscrito (dentro) em uma circunferência.
 
 <p>Isto é, todos os seus vértices estão na circunferência e sempre a uma distância $r$, que é o próprio raio da circunferência. Veja alguns casos:</p>
 
@@ -101,7 +101,7 @@ $$
 \end{align*}
 $$
 
-> Note que essa atribuição de pontos faz sempre o $n$-ésimo (último) ponto ficar sempre com ângulo de ${360^\circ}$, independentemente do valor escolhido para $n$.
+> 📝 Note que essa atribuição de pontos faz sempre o $n$-ésimo (último) ponto ficar sempre com ângulo de ${360^\circ}$, independentemente do valor escolhido para $n$.
 
 <p>Assim, para desenhar o polígono precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$. Conectar o $i$-ésimo com o $(i+1)$-ésimo ponto funciona mesmo quando $i=n$, pois o ângulo do ponto $(n+1)$ é igual ao ângulo do primeiro ponto, pela estrutura cíclica dos ângulos na circunferência.</p>
 
@@ -397,4 +397,4 @@ $$
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-raios-com-background.png" alt="Triângulo equilátero com nodes nos vértices, uma circunferência circunscrita e cor de fundo" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-<p>Agora é com você! :wave:</p>
+<p>Agora é com você! 👋</p>
