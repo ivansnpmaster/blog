@@ -1,16 +1,16 @@
 ---
 layout: null
 sitemap:
-  exclude: true
+  excluir: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in site.posts %}
-    {% if page.url != "/feed.xml" and page.publicado != false and page.sitemap.exclude != true %}
+  {% for post in site.posts %}
+    {% if post.publicado != false and post.sitemap.excluir != true %}
       <url>
-        <loc>{{ site.url }}/blog{{ page.url | remove: "index.html" }}</loc>
-        {% if page.date %}
-          <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        <loc>{{ site.url }}/blog{{ post.url | remove: "index.html" }}</loc>
+        {% if post.date %}
+          <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         {% else %}
           <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         {% endif %}
