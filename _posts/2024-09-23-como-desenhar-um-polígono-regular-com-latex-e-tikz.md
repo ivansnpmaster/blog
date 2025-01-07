@@ -397,4 +397,4 @@ $$
 
 <img src="/blog/assets/img/2024/09/23/polígono-regular-n3-raios-com-background.png" alt="Triângulo equilátero com nodes nos vértices, uma circunferência circunscrita e cor de fundo" style="width: 100%; max-width: 200px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
-<p>O código do projeto está disponível [aqui](https://gist.github.com/ivansnpmaster/bdeb4df5fe28dca6038c67871109b408). Agora é com você! 👋</p>
+<p>O código do projeto está disponível <a href="https://gist.github.com/ivansnpmaster/bdeb4df5fe28dca6038c67871109b408">aqui</a>. Agora é com você! 👋</p>
