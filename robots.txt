@@ -52,6 +52,9 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
+User-agent: Google-CloudVertexBot
+Disallow: /
+
 User-agent: GPTBot
 Disallow: /
 
