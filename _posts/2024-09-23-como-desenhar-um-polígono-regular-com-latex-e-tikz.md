@@ -2,7 +2,6 @@
 layout: post
 title: "Como desenhar um polígono regular com LaTeX e TikZ?"
 categories: matemática computação latex tikz
-publicado: false
 ---
 
 <link rel="stylesheet" href="/blog/assets/css/prism-latex.css">
