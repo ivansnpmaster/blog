@@ -37,7 +37,7 @@ publicado: false
 
 <p>Ao utilizar o tipo de documento <b>standalone</b>, vamos obter um PDF que conterá somente a imagem, sem bordas desnecessárias. Importando o pacote <b>tikz</b>, conseguimos utilizar o ambiente <b>tikzpicture</b> para colocar nossos comandos de desenho.</p>
 
-<p>Pensando nas formas de escrita de um ponto disponíveis no pacote <b>tikz</b>, vale mais a pena trabalharmos na representação polar. Na representação polar de um ponto, precisamos de apenas duas informações: o raio $r$ da circunferência e do ângulo $\beta$ em relação ao eixo $x$. Veja a ilustração de dois pontos ${\color{blue}A=(r,\,\alpha)}$ e ${\color{red}B=(r,\,\beta)}$ quaisquer:</p>
+<p>Pensando nas formas de escrita de um ponto disponíveis no pacote <b>tikz</b>, vale mais a pena trabalharmos na representação polar. Na representação polar de um ponto, precisamos de apenas duas informações: o raio $r$ da circunferência e do ângulo $\beta$ em relação ao eixo $x$. Veja a ilustração de dois pontos ${\color{blue}{A=(r,\,\alpha)}}$ e ${\color{red}{B=(r,\,\beta)}}$ quaisquer:</p>
 
 <img src="/blog/assets/img/2024/09/23/ponto_na_circunferencia.png" alt="Dois pontos A e B em uma circunferência de raio r" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
