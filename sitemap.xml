@@ -4,7 +4,7 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
-    {% unless page.publicado == false %}
+    {% if not page.publicado == false %}
         <url>
             <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
             {% if page.date %}
@@ -15,6 +15,6 @@ layout: null
             <changefreq>monthly</changefreq>
             <priority>0.3</priority>
         </url>
-    {% endunless %}
+    {% endif %}
   {% endfor %}
 </urlset>
