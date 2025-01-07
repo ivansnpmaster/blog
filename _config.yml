@@ -10,6 +10,9 @@ description: >
 
 # Build settings
 
+url: "https://ivansnpmaster.github.io"
+baseurl: "/blog"  # Esse valor define a base do caminho
+
 # If you clone the Minima repo and build locally, use this setting.
 theme: minima
 
