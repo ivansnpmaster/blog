@@ -101,7 +101,7 @@ $$
 \end{align*}
 $$
 
-> Note que essa atribuição de pontos faz sempre o $n$-ésimo ponto ficar sempre com ângulo de ${360^\circ}$, independentemente do valor escolhido para $n$.
+> Note que essa atribuição de pontos faz sempre o $n$-ésimo (último) ponto ficar sempre com ângulo de ${360^\circ}$, independentemente do valor escolhido para $n$.
 
 <p>Assim, para desenhar o polígono precisamos apenas conectar o ponto $P_i$ com o seu próximo $P_{i+1}$. Conectar o $i$-ésimo com o $(i+1)$-ésimo ponto funciona mesmo quando $i=n$, pois o ângulo do ponto $(n+1)$ é igual ao ângulo do primeiro ponto, pela estrutura cíclica dos ângulos na circunferência.</p>
 
@@ -222,7 +222,7 @@ $$
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-nodes.png" alt="Polígonos regulares - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-nodes.png" alt="Polígonos regulares - pentágono e hexágono com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
-<p>Perceba que todos os polígonos ficaram com o primeiro vértice em $\alpha$ e o último em $360^\circ$. Podemos utilizar o ambiente `scope` dentro do ambiente <b>tikzpicture</b> para "rotacionar a base cartesiana" em uma certa quantidade de graus sem precisar mudar as coordenadas dos vértices. A quantidade a ser rotacionada claramente depende de $n$, mas a pergunta que fica é: <i>quanto rotacionar?</i>.</p>
+<p>Perceba que todos os polígonos ficaram com o primeiro vértice em $\alpha$ e o último em $360^\circ$. Podemos utilizar o ambiente <b>scope</b> dentro do ambiente <b>tikzpicture</b> para "rotacionar a base cartesiana" em uma certa quantidade de graus sem precisar mudar as coordenadas dos vértices que escrevemos. A quantidade a ser rotacionada claramente depende de $n$, mas a pergunta que fica é: <i>quanto rotacionar?</i>.</p>
 
 <p>Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$, isto é, em $90^\circ-\alpha$:</p>
 
