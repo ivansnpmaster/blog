@@ -181,14 +181,16 @@ $$
 <p>Temos o que é necessário para transformar o código acima em um comando de desenho. A ideia é deixar o valor $n$ e o raio $r$ parametrizados. Vamos criar um comando que aceita dois parâmetros. Para isso, crie um novo arquivo dentro do projeto chamado <b>polígono-regular.tex</b> com a seguinte estrutura base:</p>
 
 <pre class="line-numbers">
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]
+{
     % conteúdo do comando
 }</code></pre>
 
 <p>Um comando com dois parâmetros em $\LaTeX$ é criado com o macro <b>\newcommand{\nomeComando}[número de parâmetros]{}</b>. Vamos copiar o código feito até aqui que desenha o polígono regular e fazer algumas alterações: vamos substituir onde estava $n$ e $r$ por <b>#1</b> e <b>#2</b>, respectivamente:</p>
 
-<pre class="line-numbers" data-line="2-13">
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+<pre class="line-numbers" data-line="3-14">
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]
+{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -226,8 +228,9 @@ $$
 
 <p>Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$, isto é, em $90^\circ-\alpha$:</p>
 
-<pre class="line-numbers" data-line="8-10,16">
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+<pre class="line-numbers" data-line="9-11,17">
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]
+{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -253,8 +256,9 @@ $$
 
 <p>A ideia central do post está concluída, que era de mostrar como desenhar um polígono regular com $\LaTeX$ e Ti<i>k</i>Z. Entretanto, podemos ir um pouco além e adicionar mais elementos na figura. O que ela tem a mais é a adição de uma circunferência circunscrita ao polígono de interesse, bem como a conexão dos vértices do polígono ao centro dessa mesma circunferência de forma estilizada (tracejada e com um node). Primeiro, precisamos desenhar uma circunferência de raio antes do trecho de código que desenha os lados do polígono:</p>
 
-<pre class="line-numbers" data-line="8-9,17">
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+<pre class="line-numbers" data-line="9-10,18">
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]
+{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -282,8 +286,9 @@ $$
 
 <p>Agora, podemos conectar o vértice $P_i$ com a origem $(0,\,0)$ com um segmento de reta tracejado e bem fino dentro do foreach:</p>
 
-<pre class="line-numbers" data-line="19-20">
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+<pre class="line-numbers" data-line="20-21">
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]
+{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
@@ -314,8 +319,9 @@ $$
 
 <p>Para desenhar o texto $r$ em vermelho, fiz o seguinte: dentro de um <b>scope</b> rotacionando a base cartesiana em $10^\circ$, usei o comando <b>\node</b> posicionado na metade do valor de $r$ e mesmo ângulo $\alpha$:</p>
 
-<pre class="line-numbers" data-line="22-26">
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]{
+<pre class="line-numbers" data-line="23-27">
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]
+{
     \begin{tikzpicture}
 
         \pgfmathsetmacro{\n}{#1} % lados do polígono
