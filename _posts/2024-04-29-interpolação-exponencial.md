@@ -36,13 +36,9 @@ $$\sup_{\color{magenta}{t}\in[0,1]}eerp(\color{red}{a},\,\color{blue}{b},\,\colo
     
 $$eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}^{(1-\color{magenta}{t})}\color{blue}{b}^\color{magenta}{t}=\color{red}{a}^{(1-\color{magenta}{t})}\color{red}{a}^\color{magenta}{t}=\color{red}{a}$$
 
-<p>Os dois primeiros casos estão exemplificados a seguir. Quando $\color{red}{a}<\color{blue}{b}$, tem-se:</p>
+<p>Veja a interpolação exponencial em ação:</p>
 
-<img src="/blog/assets/img/2024/04/29/interpolação_exponencial_a.png" alt="Interpolação exponencial - caso em que 'a' é menor que 'b'" style="width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; display: block;">
-
-<p>Agora, para $\color{blue}{b}<\color{red}{a}$:</p>
-
-<img src="/blog/assets/img/2024/04/29/interpolação_exponencial_b.png" alt="Interpolação exponencial - caso em que 'b' é menor que 'a'" style="width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; display: block;">
+<iframe src="https://www.desmos.com/calculator/esgtjdlybn?embed" height="500" style="width: 100%; border: 1px solid #ccc;" frameborder=0></iframe>
 
 <p>Ela pode aparecer de outras formas. Por exemplo, a partir da reescrita $y=c^{\log_c y}$, com $c\in\R^*_+$ e $c\neq1$:</p>
 
