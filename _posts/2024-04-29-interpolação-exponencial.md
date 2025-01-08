@@ -38,9 +38,9 @@ $$eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}^{(1
 
 <p>Veja a interpolação exponencial em ação:</p>
 
-<iframe src="https://www.desmos.com/calculator/esgtjdlybn?embed" height="500" style="width: 100%; border: 1px solid #ccc;" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/aewl3bwjpc?embed" height="500" style="width: 100%; border: 1px solid #ccc;" frameborder=0></iframe>
 
-<p>Ela pode aparecer de outras formas. Por exemplo, a partir da reescrita $y=c^{\log_c y}$, com $c\in\R^*_+$ e $c\neq1$:</p>
+<p style="margin-top: 10px;">Ela pode aparecer de outras formas. Por exemplo, a partir da reescrita $y=c^{\log_c y}$, com $c\in\R^*_+$ e $c\neq1$:</p>
 
 $$
 \begin{align*}
