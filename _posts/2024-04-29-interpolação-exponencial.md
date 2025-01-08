@@ -39,7 +39,7 @@ $$eerp(\color{red}{a},\,\color{blue}{b},\,\color{magenta}{t})=\color{red}{a}^{(1
 <p>Veja a interpolação exponencial em ação:</p>
 
 <iframe src="https://www.desmos.com/calculator/1aqpxbjevw?embed" height="500" style="width: 100%; border: 1px solid #ccc;" frameborder=0></iframe>
-<iframe scrolling="no" title="Interpolação exponencial" src="https://www.geogebra.org/material/iframe/id/nrfmmnhy/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/true/sdz/false/ctl/false" width="700px" height="500px" style="border:0px;"> </iframe>
+<iframe scrolling="no" title="Interpolação exponencial" src="https://www.geogebra.org/material/iframe/id/nrfmmnhy/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/true/sdz/false/ctl/false" width="100%" height="500px" style="border:0px;"> </iframe>
 
 <p style="margin-top: 20px;">Ela pode aparecer de outras formas. Por exemplo, a partir da reescrita $y=c^{\log_c y}$, com $c\in\R^*_+$ e $c\neq1$:</p>
 
