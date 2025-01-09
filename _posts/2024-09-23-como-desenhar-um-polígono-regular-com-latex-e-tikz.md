@@ -46,9 +46,9 @@ categories: matemática computação latex tikz
 
 $$
 \begin{center}
-    P_1=(r,\,1\cdot\alpha)=(r,\,1\cdot120^\circ)=(r,\,120^\circ)\\
-    P_2=(r,\,2\cdot\alpha)=(r,\,2\cdot120^\circ)=(r,\,240^\circ)\\
-    P_3=(r,\,3\cdot\alpha)=(r,\,3\cdot120^\circ)=(r,\,360^\circ)
+    P_1&=(r,\,1\cdot\alpha)=(r,\,1\cdot120^\circ)=(r,\,120^\circ)\\
+    P_2&=(r,\,2\cdot\alpha)=(r,\,2\cdot120^\circ)=(r,\,240^\circ)\\
+    P_3&=(r,\,3\cdot\alpha)=(r,\,3\cdot120^\circ)=(r,\,360^\circ)
 \end{center}
 $$
 
@@ -56,10 +56,10 @@ $$
 
 $$
 \begin{center}
-    P_1=(r,\,1\cdot\alpha)=(r,\,1\cdot90^\circ)=(r,\,90^\circ)\\
-    P_2=(r,\,2\cdot\alpha)=(r,\,2\cdot90^\circ)=(r,\,180^\circ)\\
-    P_3=(r,\,3\cdot\alpha)=(r,\,3\cdot90^\circ)=(r,\,270^\circ)\\
-    P_4=(r,\,4\cdot\alpha)=(r,\,4\cdot90^\circ)=(r,\,360^\circ)
+    P_1&=(r,\,1\cdot\alpha)=(r,\,1\cdot90^\circ)=(r,\,90^\circ)\\
+    P_2&=(r,\,2\cdot\alpha)=(r,\,2\cdot90^\circ)=(r,\,180^\circ)\\
+    P_3&=(r,\,3\cdot\alpha)=(r,\,3\cdot90^\circ)=(r,\,270^\circ)\\
+    P_4&=(r,\,4\cdot\alpha)=(r,\,4\cdot90^\circ)=(r,\,360^\circ)
 \end{center}
 $$
 
