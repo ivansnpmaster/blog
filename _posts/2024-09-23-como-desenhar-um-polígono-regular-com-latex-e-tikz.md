@@ -320,8 +320,8 @@ $$
 
 <p>Por fim, podemos adicionar uma cor de fundo no polígono. Podemos fazer isso também via foreach, mas com uma pequena modificação. Como a ordem dos elementos desenhados importa, precisamos adicionar o trecho de código de modo que a cor de fundo seja desenhada primeiro, antes dos outros elementos:</p>
 
-<pre class="line-numbers" data-line="16-19">
-<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]%
+<pre class="line-numbers" data-line="17-20">
+<code class="language-latex">\newcommand{\desenharPoligonoRegular}[2]
 {
     \begin{tikzpicture}
 
@@ -336,6 +336,7 @@ $$
         % 90-\a graus no sentido anti-horário
         \begin{scope}[rotate=90-\a]
 
+            % cor de fundo para o polígono
             \fill[gray!30] (\a:\r) foreach \i in {2,3,...,\n}
             {
                 -- ({\i*\a}:\r)
