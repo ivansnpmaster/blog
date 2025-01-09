@@ -351,7 +351,7 @@ $$P_4=(r,\,4\cdot\alpha)=(r,\,4\cdot90^\circ)=(r,\,360^\circ)$$
     \end{tikzpicture}
 }</code></pre>
 
-<p>Acima, veja que usamos o comando <b>\fill[gray!30]</b> seguido do primeiro vértice <b>(\a:\r)</b> que define a região da cor de fundo. Especificamos a cor de fundo sendo um cinza $30\%$. Em seguida usamos o comando <b>foreach</b>, de forma a ter dentro dele as coordenadas que definem os vértices do polígono que será preenchido (de forma iterativa). Logo após o <b>foreach</b>, colocamos <b>`--` cycle</b> para fechar o polígono da cor de fundo, conectando o último vértice da iteração com o primeiro <b>(\a:\r)</b>.</p>
+<p>Acima, veja que usamos o comando <b>\fill[gray!30]</b> seguido do primeiro vértice <b>(\a:\r)</b>. Especificamos a cor de fundo sendo um cinza $30\%$. Em seguida usamos o comando <b>foreach</b>, de forma a ter dentro dele as coordenadas que definem os vértices do polígono que será preenchido (de forma iterativa), da segunda em diante. Logo após o <b>foreach</b>, colocamos <b>`--` cycle</b> para fechar o polígono da cor de fundo, conectando o último vértice da iteração com o primeiro <b>(\a:\r)</b>.</p>
 
 <p>O código acima produz a seguinte figura para $n=3$:</p>
 
