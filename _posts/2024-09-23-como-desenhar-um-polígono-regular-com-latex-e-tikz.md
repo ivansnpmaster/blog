@@ -178,7 +178,7 @@ $$P_4=(r,\,4\cdot\alpha)=(r,\,4\cdot90^\circ)=(r,\,360^\circ)$$
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n3-n4-nodes.png" alt="Polígonos regulares - triângulo e quadrado com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 <img src="/blog/assets/img/2024/09/23/polígonos-regulares-n5-n6-nodes.png" alt="Polígonos regulares - pentágono e hexágono com nodes" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 20px;">
 
-<p>Perceba que todos os polígonos ficaram com o primeiro vértice em $\alpha$ e o último em $360^\circ$. Podemos utilizar o ambiente <b>scope</b> dentro do ambiente <b>tikzpicture</b> para "rotacionar a base cartesiana" em uma certa quantidade de graus sem precisar mudar as coordenadas dos vértices que escrevemos. A quantidade a ser rotacionada claramente depende de $n$, mas a pergunta que fica é: <i>quanto rotacionar?</i>.</p>
+<p>Perceba também que todos os polígonos ficaram com o primeiro vértice em $\alpha$ e o último em $360^\circ$, fazendo parecer que para alguns valores de $n$ a figura está torta. Para consertar isso, podemos utilizar o ambiente <b>scope</b> dentro do ambiente <b>tikzpicture</b> para "rotacionar a base cartesiana" em uma certa quantidade de graus sem precisar mudar as coordenadas dos vértices que escrevemos. A quantidade a ser rotacionada claramente depende de $n$, mas a pergunta que fica é: <i>quanto rotacionar?</i>.</p>
 
 <p>Para deixar sempre o primeiro vértice do polígono fixo em, por exemplo, $90^\circ$, basta rotacionarmos a base cartesiana no ângulo complementar de $\alpha$, isto é, em $90^\circ-\alpha$:</p>
 
