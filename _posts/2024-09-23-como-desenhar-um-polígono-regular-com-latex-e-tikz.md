@@ -36,7 +36,7 @@ categories: matemática computação latex tikz
 
 <p>Ao utilizar o tipo de documento <b>standalone</b>, vamos obter um PDF que conterá somente a imagem, sem bordas desnecessárias. Importando o pacote <b>tikz</b>, conseguimos utilizar o ambiente <b>tikzpicture</b> para colocar nossos comandos de desenho.</p>
 
-<p>Pensando nas formas de escrita de um ponto disponíveis no pacote <b>tikz</b>, vale mais a pena trabalharmos na representação polar. Na representação polar de um ponto, precisamos de apenas duas informações: o raio $r$ da circunferência e do ângulo $\beta$ em relação ao eixo $x$. Veja a ilustração de dois pontos ${\color{blue}{A=(r,\,\alpha)}}$ e ${\color{red}{B=(r,\,\beta)}}$ quaisquer:</p>
+<p>Pensando nas formas de escrita de um ponto disponíveis no pacote <b>tikz</b>, vale mais a pena trabalharmos na representação polar. Na representação polar de um ponto, precisamos de apenas duas informações: o raio $r$ da circunferência e do ângulo $\alpha$ em relação ao eixo $x$. Veja a ilustração de dois pontos ${\color{blue}{A=(r,\,\alpha)}}$ e ${\color{red}{B=(r,\,\beta)}}$ quaisquer:</p>
 
 <img src="/blog/assets/img/2024/09/23/ponto_na_circunferencia.png" alt="Dois pontos A e B em uma circunferência de raio r" style="width: 100%; max-width: 450px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px; margin-bottom: 30px;">
 
@@ -44,61 +44,16 @@ categories: matemática computação latex tikz
 
 <p>Por exemplo, a partir $r$ e de $\alpha$, os três pontos que formam o triângulo equilátero são, para $\alpha=\frac{360^\circ}{3}=120^\circ$:</p>
 
-$$
-\begin{align*}
-    P_1&=(r,\,1\cdot\alpha)\\
-    &=(r,\,1\cdot120^\circ)
-\end{align*}
-$$
-
-$$
-\begin{align*}
-    P_2&=(r,\,2\cdot\alpha)\\
-    &=(r,\,2\cdot120^\circ)\\
-    &=(r,\,240^\circ)
-\end{align*}
-$$
-
-$$
-\begin{align*}
-    P_3&=(r,\,3\cdot\alpha)\\
-    &=(r,\,3\cdot120^\circ)\\
-    &=(r,\,360^\circ)
-\end{align*}
-$$
+$$P_1=(r,\,1\cdot\alpha)=(r,\,1\cdot120^\circ)=(r,\,120^\circ)$$
+$$P_2=(r,\,2\cdot\alpha)=(r,\,2\cdot120^\circ)=(r,\,240^\circ)$$
+$$P_3=(r,\,3\cdot\alpha)=(r,\,3\cdot120^\circ)=(r,\,360^\circ)$$
 
 <p>Da mesma maneira, os quatro pontos que formam o quadrado são, para $\alpha=\frac{360^\circ}{4}=90^\circ$:</p>
 
-$$
-\begin{align*}
-    P_1&=(r,\,1\cdot\alpha)\\
-    &=(r,\,1\cdot90^\circ)
-\end{align*}
-$$
-
-$$
-\begin{align*}
-    P_2&=(r,\,2\cdot\alpha)\\
-    &=(r,\,2\cdot90^\circ)\\
-    &=(r,\,180^\circ)
-\end{align*}
-$$
-
-$$
-\begin{align*}
-    P_3&=(r,\,3\cdot\alpha)\\
-    &=(r,\,3\cdot90^\circ)\\
-    &=(r,\,270^\circ)
-\end{align*}
-$$
-
-$$
-\begin{align*}
-    P_4&=(r,\,4\cdot\alpha)\\
-    &=(r,\,4\cdot90^\circ)\\
-    &=(r,\,360^\circ)
-\end{align*}
-$$
+$$P_1=(r,\,1\cdot\alpha)=(r,\,1\cdot90^\circ)=(r,\,90^\circ)$$
+$$P_2=(r,\,2\cdot\alpha)=(r,\,2\cdot90^\circ)=(r,\,180^\circ)$$
+$$P_3=(r,\,3\cdot\alpha)=(r,\,3\cdot90^\circ)=(r,\,270^\circ)$$
+$$P_4=(r,\,4\cdot\alpha)=(r,\,4\cdot90^\circ)=(r,\,360^\circ)$$
 
 > 📝 Note que essa atribuição de pontos faz sempre o $n$-ésimo (último) ponto ficar sempre com ângulo de ${360^\circ}$, independentemente do valor escolhido para $n$.
 
